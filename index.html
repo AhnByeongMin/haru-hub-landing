@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="불필요한 업무 과정을 제거하는 개발자 — 실사용 데이터 기반 CRM 자동화·협업 플랫폼·인프라 설계">
+    <meta name="theme-color" content="#0a0a0a">
+    <title>HaruHub — 불필요한 업무 과정을 제거하는 개발자</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;450;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+KR:wght@400;500;600;700&display=swap">
+
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+
+<!-- ───────── NAV ───────── -->
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="#top" class="logo">
+            <span class="logo-mark" aria-hidden="true">H.</span>
+            <span class="logo-text">haru<em>hub</em></span>
+        </a>
+        <div class="nav-links">
+            <a href="#journey"><span class="nav-num">01</span> Journey</a>
+            <a href="#philosophy"><span class="nav-num">02</span> Philosophy</a>
+            <a href="#impact"><span class="nav-num">03</span> Impact</a>
+            <a href="#contact"><span class="nav-num">04</span> Contact</a>
+            <a href="https://haru-hub.com/teamhub" class="nav-cta">TeamHub &nbsp;↗</a>
+        </div>
+    </div>
+</nav>
+
+<!-- ───────── HERO ───────── -->
+<section id="top" class="hero">
+    <div class="container hero-inner">
+        <p class="hero-meta">
+            <span class="hero-meta-dot" aria-hidden="true"></span>
+            <span class="hero-meta-text">Currently running · 실사용 데이터 기반</span>
+            <span class="hero-meta-sep">/</span>
+            <span class="hero-meta-loc">haru-hub.com</span>
+        </p>
+
+        <h1 class="hero-title">
+            <em>불필요한 업무 과정</em>을<br>
+            제거하는 개발자.
+        </h1>
+
+        <div class="hero-lede">
+            <p>
+                실제 콜센터 업무를 분석해 <mark>CRM 자동화 시스템</mark>과 운영 웹앱을 구축했고,
+                인프라·배포 환경까지 포함한 <mark>서비스 설계·운영 경험</mark>을 보유한 개발자입니다.
+            </p>
+            <div class="hero-cta">
+                <a href="#impact" class="btn btn-primary">성과 보기 &nbsp;↓</a>
+                <a href="#journey" class="btn btn-ghost">경험의 흐름</a>
+            </div>
+        </div>
+
+        <dl class="hero-kpi">
+            <div class="hero-kpi-item">
+                <dt>일일 보고</dt>
+                <dd><span class="kpi-from">수시간</span><span class="kpi-sep">→</span><span class="kpi-to">10분</span></dd>
+            </div>
+            <div class="hero-kpi-item">
+                <dt>캠페인 분석</dt>
+                <dd><span class="kpi-from">1시간</span><span class="kpi-sep">→</span><span class="kpi-to">30초</span></dd>
+            </div>
+            <div class="hero-kpi-item">
+                <dt>스코프</dt>
+                <dd><span class="kpi-scope">UI · API · 인프라</span></dd>
+            </div>
+        </dl>
+    </div>
+    <div class="hero-bg" aria-hidden="true"></div>
+</section>
+
+<!-- ───────── JOURNEY (경험의 흐름) ───────── -->
+<section id="journey" class="journey">
+    <div class="container">
+        <div class="section-head">
+            <span class="section-label"><span class="sect-num">01</span> Journey</span>
+            <h2 class="section-title">
+                경험이 <em>철학</em>을 만들고,<br>
+                철학이 <em>결과</em>를 만들었다.
+            </h2>
+            <p class="section-desc">
+                단순 이력 나열이 아니라, 네 단계의 경험이 서로 연결되어 지금의 시스템을 만들었습니다.
+            </p>
+        </div>
+
+        <div class="timeline">
+            <div class="tl-item">
+                <div class="tl-marker">
+                    <span class="tl-num">01</span>
+                    <span class="tl-year">2018</span>
+                </div>
+                <div class="tl-body">
+                    <h3>스타트업에서 UX의 중요성을 체감하다</h3>
+                    <p class="tl-where">브링프라이스 · 호텔/항공 메타서치 플랫폼</p>
+                    <p>사용자 이탈을 눈으로 목격하며 <strong>"왜 UX가 중요한가"</strong>를 체감. 이 경험이 이후 모든 시스템 설계의 출발점이 되었습니다.</p>
+                </div>
+            </div>
+
+            <div class="tl-item">
+                <div class="tl-marker">
+                    <span class="tl-num">02</span>
+                    <span class="tl-year">2022</span>
+                </div>
+                <div class="tl-body">
+                    <h3>대규모 인증 시스템에서 안정성·보안을 배우다</h3>
+                    <p class="tl-where">넥스그리드 · LGU+ DAS 프로젝트</p>
+                    <p>U+ID 인증 시스템 개발·MFA 구현·모의해킹 대응. <strong>실 사용자가 있는 시스템의 무게</strong>를 경험했습니다.</p>
+                </div>
+            </div>
+
+            <div class="tl-item">
+                <div class="tl-marker">
+                    <span class="tl-num">03</span>
+                    <span class="tl-year">2024</span>
+                </div>
+                <div class="tl-body">
+                    <h3>실제 업무 문제를 직접 해결하다</h3>
+                    <p class="tl-where">콜센터 CRM 업무협업툴 · 운영 웹앱</p>
+                    <p>엑셀 수작업을 클릭 한 번으로. <strong>수시간짜리 업무를 수분으로</strong> 단축한 시스템을 설계·구축·운영.</p>
+                </div>
+            </div>
+
+            <div class="tl-item">
+                <div class="tl-marker">
+                    <span class="tl-num">04</span>
+                    <span class="tl-year">Now</span>
+                </div>
+                <div class="tl-body">
+                    <h3>아키텍처까지 직접 설계하다</h3>
+                    <p class="tl-where">TeamHub · 개인 SaaS 협업 플랫폼</p>
+                    <p>Proxmox 가상화부터 CI/CD·무중단 배포까지. <strong>인프라부터 서비스까지</strong> 직접 설계한 통합 협업 플랫폼.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ───────── PHILOSOPHY ───────── -->
+<section id="philosophy" class="philosophy">
+    <div class="container">
+        <div class="section-label">Philosophy</div>
+        <div class="section-head">
+            <span class="section-label"><span class="sect-num">02</span> Philosophy</span>
+        </div>
+
+        <blockquote class="quote">
+            <p class="quote-text">
+                불필요한 동작을 제거하는 것이<br>
+                가장 큰 <em>UX 개선</em>이다.
+            </p>
+            <footer class="quote-cite">
+                <span class="quote-dash">—</span> 스타트업에서 사용자 이탈을 목격하며 형성된 철학
+            </footer>
+        </blockquote>
+
+        <div class="philo-examples">
+            <div class="philo-card">
+                <div class="philo-idx">i.</div>
+                <h4>Click Once</h4>
+                <p>복잡한 분석도 단일 버튼 한 번으로.</p>
+            </div>
+            <div class="philo-card">
+                <div class="philo-idx">ii.</div>
+                <h4>Remove, not Add</h4>
+                <p>기능을 더하는 대신 불필요한 것을 제거.</p>
+            </div>
+            <div class="philo-card">
+                <div class="philo-idx">iii.</div>
+                <h4>Time Back to Human</h4>
+                <p>반복은 시스템이, 사람은 판단에 집중.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ───────── IMPACT: 콜센터 실무 프로젝트 ───────── -->
+<section id="impact" class="impact">
+    <div class="container">
+        <div class="section-head">
+            <span class="section-label"><span class="sect-num">03</span> Impact · 실무 프로젝트</span>
+            <h2 class="section-title">
+                실제 콜센터 업무를 바꾼<br>
+                <em>두 시스템</em>.
+            </h2>
+            <p class="section-desc">
+                토이 프로젝트가 아닙니다. 지금 이 순간에도 현장에서 업무에 사용되고 있습니다.
+            </p>
+        </div>
+
+        <!-- Project 1 -->
+        <article class="project project-highlight">
+            <div class="project-index">01</div>
+            <div class="project-body">
+                <div class="project-meta">
+                    <span class="tag tag-primary">Core Project</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Streamlit</span>
+                    <span class="tag">Pandas</span>
+                    <span class="tag">Excel 자동화</span>
+                </div>
+                <h3>CRM 업무협업툴 — 분석·보고 자동화</h3>
+                <p class="project-lead">
+                    콜센터 CRM 데이터를 기반으로
+                    <strong>엑셀 수작업을 클릭 1회</strong>로 바꾼 분석 시스템.
+                </p>
+
+                <div class="kpi-table">
+                    <div class="kpi-head">
+                        <div>업무</div>
+                        <div>기존</div>
+                        <div>개선</div>
+                        <div class="kpi-head-gain">단축</div>
+                    </div>
+                    <div class="kpi-row">
+                        <div>일일 보고</div>
+                        <div class="kpi-before">수시간</div>
+                        <div class="kpi-after">약 10분</div>
+                        <div class="kpi-gain">~95%</div>
+                    </div>
+                    <div class="kpi-row">
+                        <div>실적 분석</div>
+                        <div class="kpi-before">10~20분</div>
+                        <div class="kpi-after">1분</div>
+                        <div class="kpi-gain">~95%</div>
+                    </div>
+                    <div class="kpi-row">
+                        <div>캠페인 분석</div>
+                        <div class="kpi-before">1시간</div>
+                        <div class="kpi-after">30초</div>
+                        <div class="kpi-gain">~99%</div>
+                    </div>
+                    <div class="kpi-row">
+                        <div>연계 실적 체크</div>
+                        <div class="kpi-before">30분+</div>
+                        <div class="kpi-after">1분</div>
+                        <div class="kpi-gain">~97%</div>
+                    </div>
+                </div>
+
+                <ul class="project-bullets">
+                    <li><strong>다중 엑셀 통합 분석</strong> — 여러 파일을 한 번에 드래그·드롭</li>
+                    <li><strong>상담사별 실적 자동 집계</strong> — 목표 대비 달성률 실시간 계산</li>
+                    <li><strong>예약/신규/미관리 자동 분류</strong> — 조건 기반 필터링</li>
+                    <li><strong>캠페인/정규 분배 분석</strong> · <strong>연계 실적 검증</strong></li>
+                    <li><strong>결과 Excel 자동 생성</strong> — 보고 양식 그대로</li>
+                </ul>
+
+                <div class="project-note">
+                    <span class="note-label">Note</span>
+                    <p><strong>엑셀 기반 업무를 시스템화</strong>해 "시간 단위"를 제거했습니다. 오전 내내 걸리던 일이 아침 커피 마시는 동안 끝납니다.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project">
+            <div class="project-index">02</div>
+            <div class="project-body">
+                <div class="project-meta">
+                    <span class="tag">Operation System</span>
+                    <span class="tag">Web</span>
+                    <span class="tag">PWA</span>
+                    <span class="tag">KPI Management</span>
+                </div>
+                <h3>CRM WebApp — 운영·관리 시스템</h3>
+                <p class="project-lead">
+                    콜센터 운영 및 협업을 위한 <strong>내부 웹 애플리케이션</strong>.
+                    업무 실행과 관리까지 하나로.
+                </p>
+                <ul class="project-bullets">
+                    <li><strong>KPI 관리</strong> — 상담원 실적을 실시간 반영</li>
+                    <li><strong>사용자/권한 관리</strong> · <strong>할일(Task) 관리</strong></li>
+                    <li><strong>프로모션 관리</strong> · <strong>예약 관리</strong></li>
+                    <li><strong>웹 채팅 (PWA)</strong> — 모바일에서도 네이티브 앱처럼</li>
+                    <li><strong>개인 메모 및 보조 기능</strong></li>
+                </ul>
+                <div class="project-note">
+                    <span class="note-label">Design</span>
+                    <p><strong>실무 흐름 중심 설계 · 불필요한 기능 제거 · 직관적 UI/UX</strong>. "사용자가 쓰기 쉬운가"가 유일한 기준.</p>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- ───────── PERSONAL: TeamHub ───────── -->
+<section class="personal">
+    <div class="container">
+        <div class="section-head">
+            <span class="section-label"><span class="sect-num">04</span> Personal Project</span>
+            <h2 class="section-title">
+                인프라부터 직접 설계한<br>
+                <em>SaaS형 협업 플랫폼</em>.
+            </h2>
+        </div>
+
+        <article class="project project-highlight">
+            <div class="project-index">03</div>
+            <div class="project-body">
+                <div class="project-meta">
+                    <span class="tag tag-primary">TeamHub</span>
+                    <span class="tag">Next.js</span>
+                    <span class="tag">Spring Boot</span>
+                    <span class="tag">Proxmox</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">GitHub Actions</span>
+                </div>
+                <h3>TeamHub — 통합 협업 플랫폼</h3>
+                <p class="project-lead">
+                    <strong>실 사용자에게 가장 좋은 업무 환경</strong>을 직접 만들고 싶어 시작한 개인 프로젝트.
+                    프론트·API·DB·배포·도메인·장애 대응까지 혼자 설계했습니다.
+                </p>
+
+                <div class="stack-grid">
+                    <div class="stack-col">
+                        <h4 class="stack-head">Services</h4>
+                        <ul>
+                            <li>프로젝트 · 칸반 관리</li>
+                            <li>게시판 · 드라이브 (1GB 업로드)</li>
+                            <li>실시간 채팅 (WebSocket)</li>
+                            <li>캘린더 · 개인 할일</li>
+                            <li>관리자 · 관제 · 알림</li>
+                        </ul>
+                    </div>
+                    <div class="stack-col">
+                        <h4 class="stack-head">Infrastructure</h4>
+                        <ul>
+                            <li>Proxmox 가상화 + LXC/Docker</li>
+                            <li>nginx · HAProxy 다중 라우팅</li>
+                            <li>Blue-Green 무중단 배포</li>
+                            <li>GitHub Actions CI/CD</li>
+                            <li>도메인 이중화 (DDNS 장애 대응)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-note">
+                    <span class="note-label">Ops</span>
+                    <p><strong>기존 Jenkins+Shell의 불완전 배포 → 테스트 실패 시 자동 차단·무중단 배포</strong>로 개선. 장애 분석·대응 경험까지 포함.</p>
+                </div>
+                <a href="https://haru-hub.com/teamhub" class="project-link" target="_blank" rel="noopener">
+                    <span>실제 운영 중 — haru-hub.com</span>
+                    <span class="link-arrow" aria-hidden="true">↗</span>
+                </a>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- ───────── EXPERIENCE (경력) ───────── -->
+<section class="experience">
+    <div class="container">
+        <div class="section-head">
+            <span class="section-label"><span class="sect-num">05</span> Experience</span>
+            <h2 class="section-title">경력.</h2>
+        </div>
+
+        <!-- 넥스그리드 -->
+        <div class="exp-card">
+            <div class="exp-header">
+                <div>
+                    <h3>넥스그리드</h3>
+                    <p class="exp-sub">LGU+ DAS 프로젝트 · 백엔드 개발자</p>
+                </div>
+                <div class="exp-period">2022.04 — 2024.01</div>
+            </div>
+            <ul class="exp-bullets">
+                <li><strong>LGU+ U+ID 인증 시스템</strong> 개발 및 개선
+                    <ul>
+                        <li>비밀번호 변경 주기 알림 · MFA(2차 인증) 로직</li>
+                        <li>로그인 보안 강화 (모의해킹 대응)</li>
+                    </ul>
+                </li>
+                <li><strong>Admin 시스템</strong> 구축 — 권한 인증 · 사용자 이력 관리</li>
+                <li><strong>LGU+ Ucube 차세대 API</strong> 전환</li>
+                <li>로그인 UX 개선</li>
+            </ul>
+            <div class="exp-summary">인증 · 보안 · 관리 시스템 중심의 백엔드 개발</div>
+        </div>
+
+        <!-- 브링프라이스 -->
+        <div class="exp-card">
+            <div class="exp-header">
+                <div>
+                    <h3>브링프라이스 <span class="exp-badge">스타트업</span></h3>
+                    <p class="exp-sub">호텔/항공 메타서치 · 백엔드 개발자</p>
+                </div>
+                <div class="exp-period">2018.07 — 2019.01</div>
+            </div>
+            <ul class="exp-bullets">
+                <li><strong>다중 OTA API 연동</strong> — Expedia · Agoda · Booking.com</li>
+                <li><strong>가격 비교 로직</strong> 구현 · Skyscanner 기반 항공권 최저가 검색</li>
+                <li><strong>위메프 여행 카테고리 호텔 검색</strong> 기능 개발 참여</li>
+                <li>마이리얼트립 유사 프로젝트 참여</li>
+            </ul>
+            <div class="exp-summary">
+                데이터 통합 · 비교 기반 서비스 개발의 시작점 · <em>사용자 이탈 경험으로부터 UX 철학 형성</em>
+            </div>
+            <div class="exp-exit">
+                <span class="exit-label">Note</span> 스타트업 사업 종료(폐업)로 퇴사
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ───────── CONTACT ───────── -->
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="section-head">
+            <span class="section-label"><span class="sect-num">06</span> Contact</span>
+            <h2 class="section-title">
+                <em>채용 · 협업 · 프로젝트</em> 문의 환영.
+            </h2>
+            <p class="contact-sub">가장 빠른 답변은 이메일 — 보통 하루 내 회신합니다.</p>
+        </div>
+
+        <div class="contact-cards">
+            <a href="mailto:hi@haru-hub.com" class="contact-card">
+                <div class="contact-lbl">Email</div>
+                <div class="contact-val">hi@haru-hub.com</div>
+                <span class="contact-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href="https://haru-hub.com/teamhub" target="_blank" rel="noopener" class="contact-card">
+                <div class="contact-lbl">Live Service</div>
+                <div class="contact-val">haru-hub.com</div>
+                <span class="contact-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href="https://github.com/AhnByeongMin" target="_blank" rel="noopener" class="contact-card">
+                <div class="contact-lbl">GitHub</div>
+                <div class="contact-val">@AhnByeongMin</div>
+                <span class="contact-arrow" aria-hidden="true">↗</span>
+            </a>
+        </div>
+
+        <p class="contact-closing">
+            <strong>실사용 데이터</strong>를 기반으로 <strong>업무 자동화 시스템</strong>을 구축하고,
+            운영 웹앱과 협업 플랫폼까지 확장한 개발자입니다.
+        </p>
+    </div>
+</section>
+
+<!-- ───────── FOOTER ───────── -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div>
+                <div class="logo">
+                    <span class="logo-mark" aria-hidden="true">H.</span>
+                    <span class="logo-text">haru<em>hub</em></span>
+                </div>
+                <p class="footer-desc">불필요한 업무 과정을 제거하는 개발자.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#journey">Journey</a>
+                <a href="#philosophy">Philosophy</a>
+                <a href="#impact">Impact</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 · haru-hub.com</span>
+            <span class="footer-dot" aria-hidden="true">·</span>
+            <span>Built on own infrastructure — Proxmox · Cloudflare · Let's Encrypt</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+// 스크롤 시 섹션 fade-in
+const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('in');
+    });
+}, { threshold: 0.08 });
+document.querySelectorAll('section, .project, .exp-card, .contact-card, .tl-item, .philo-card').forEach(el => {
+    el.classList.add('fade');
+    io.observe(el);
+});
+</script>
+
+</body>
+</html>
