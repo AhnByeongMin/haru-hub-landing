@@ -276,6 +276,7 @@ mark {
 }
 .hero-meta-sep { color: var(--ink-5); }
 .hero-meta-loc { color: var(--ink-2); }
+.hero-stats { flex-wrap: wrap; }
 
 .hero-title {
     font-family: var(--serif);
