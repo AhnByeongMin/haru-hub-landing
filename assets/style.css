@@ -972,6 +972,17 @@ section.contact {
     line-height: 1.55;
     border-radius: var(--radius);
 }
+.exp-quote {
+    margin: 10px 0 4px 18px;
+    padding: 9px 14px;
+    background: rgba(255,255,255,0.015);
+    border-left: 2px solid var(--rule-str);
+    color: var(--ink-3);
+    font-style: italic;
+    font-size: 13px;
+    line-height: 1.55;
+    border-radius: var(--radius);
+}
 .exp-summary em {
     font-family: var(--serif);
     color: var(--ink);
