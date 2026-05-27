@@ -42,7 +42,8 @@
    - lease: 매물목록 → 매물상세 → 계약(임대차) → 캘린더
    - cashpulse: 홈/검색 → 종목상세(재무·차트) → 관심/평가손익 → 알림
    - teamhub: 프로젝트/칸반 → 채팅 → 드라이브/캘린더 → **관리자/관제센터**(차별점 — 데모 계정에 임시 MASTER 부여 후 캡처, 끝나면 USER 원복. teamhub는 DB role 즉시 반영)
-4. **랜딩 탭 UI** — Personal 섹션에 탭+이미지. 순수 HTML/CSS+최소 JS(탭 전환, IntersectionObserver 패턴 재사용). 이미지 `assets/screenshots/{app}-{n}.png`. 모바일 가독성·repo 용량 주의(이미지 압축).
+4. **랜딩 탭 UI** — ✅ **완료 (2026-05-27, 라이브 반영)**. Personal 섹션 section-head·How 노트 다음, 첫 프로젝트 카드 앞에 `.shots` 컴포넌트 삽입. 탭 3개(TeamHub/CashPulse/haru-lease) + 폰 프레임 갤러리(`.shots-row` 가로 스크롤·scroll-snap). 순수 HTML/CSS(`assets/style.css` 끝 `.shots*` 블록, 토큰 재사용·radius18 폰프레임) + 최소 JS(index.html 하단 script에 탭 토글 추가). 이미지 11장 `assets/screenshots/{app}-{n}-{desc}.png`, `loading=lazy`. 데스크톱=행 정렬·모바일=가로 스크롤 검증. 커밋 `0d65bbc`.
+   - 후속(선택): 이미지 총 ~1.5MB(PNG 11장). 필요 시 압축/WebP 전환 — 현재 lazy-load라 급하지 않음.
 
 ## 주의
 
