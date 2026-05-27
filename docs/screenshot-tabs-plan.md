@@ -34,8 +34,9 @@
    - cashpulse: ✅ **캡처 4장 완료 (2026-05-27)**(홈/종목상세/관심/알림, `assets/screenshots/cashpulse-*.png`). 자체 signup 비활성(410 OAuth전용)이라 **데모 user DB insert**(`users` id9 `demo@haru-hub.com` 닉='데모 투자자' provider='demo' — UI 로그인 불가·inert) + HS256 JWT 수동발급(secret<32B→SHA256) 후 **watchlist 5종/알림 3건 API 입력**(삼성·SK하이닉스·NAVER·카카오·LG엔솔, 공개종목이라 무해). 평가손익=가상 매수원가/수량. 데모 user·데이터 캡처 후 DB 유지(격리·inert·재캡처용).
      ⚠️ **캡처 환경 함정 2개 (해결)**: ① 하단 nav 등 아이콘이 이모지(🏠🏆📅★🔔)인데 헤드리스 chromium에 이모지폰트 없어 `≡` tofu 폴백 → `~/.fonts/NotoColorEmoji.ttf` 유저설치(sudo無)+fc-cache로 해결. ② PWA "설치" 배너가 콘텐츠 가림 → localStorage `cashpulse:install-dismissed` 주입으로 숨김. 캡처 스크립트=`/tmp/cap-cp.js`(cp_access+cp_user JSON+배너dismiss 주입).
      🐛 **발견 버그(미수정)**: 음수 평가손익/괴리 금액이 소수 4자리로 표시(`-527,500.0000`, 이익은 `+1,260,000` 깔끔). 음수 포맷 미절삭. 코드+배포 별건이라 보류 — 별도 수정 시 재캡처.
-   - teamhub: 실유저 23 → 데모 user + 더미 프로젝트/칸반/채팅.
-   - ⚠️ OAuth 앱(cashpulse/lease)은 데모 user를 **DB insert** 후 JWT 발급이 가입 우회로 간편(OAuth 자동화 회피).
+   - teamhub: ✅ **캡처 3장 완료 (2026-05-27)**(칸반/채팅/관제센터, `assets/screenshots/teamhub-*.png`). **공유 워크스페이스라 실유저 23명 콘텐츠가 섞여** 기존 데이터 못 씀 → **격리 데모를 새로 생성**: 데모 유저 3명 DB insert(25 김지훈/PM·26 이서연/디자인·27 박준호/개발, status ACTIVE) + JWT 수동발급 + API로 프로젝트 'NOVA'(이슈 8개 칸반분포)·채널 '개발-일반'(메시지 6)·약관동의(`/consents/agree` TERMS·PRIVACY·AGE_14, 안 하면 동의모달 뜸) 생성. **관제센터=`/admin/monitor` '시스템' 탭만**(서비스상태/힙/커넥션풀 — PII 없음). 기본 '에러트래킹' 탭은 audit log에 실유저명 떠서 회피. 캡처용 user25 임시 **MASTER+monitor_access=1 부여 후 즉시 USER+0 원복**(DB role 즉반영).
+   - ✅ **teamhub 데모 데이터 캡처 후 전량 삭제**(워크스페이스 오염 방지) — 유저3·프로젝트·채널·이슈·메시지·notifications·consent·audit·drive_items·user_presence 등 FK 참조행 정리, **유저수 23 복원·orphan 0 검증**. (lease/cashpulse는 격리·inert라 유지했지만 teamhub는 공유 워크스페이스라 삭제.)
+   - ⚠️ OAuth 앱(cashpulse/lease)은 데모 user를 **DB insert** 후 JWT 발급이 가입 우회로 간편(OAuth 자동화 회피). teamhub 캡처 스크립트=`/tmp/cap-th.js`(토큰주입)·`/tmp/cap-th2.js`(Radix 탭 실마우스클릭).
    - 더미 입력하며 회원가입·입력 흐름 **버그도 같이 체크**(사용자 기대).
 3. **3앱 흐름 캡처** — 앱당 3~4장. 흐름 예시:
    - lease: 매물목록 → 매물상세 → 계약(임대차) → 캘린더
