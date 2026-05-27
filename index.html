@@ -334,6 +334,44 @@
             <p>같은 자가 인프라(Proxmox · Cloudflare · nginx) 위에 <strong>검증된 패턴(인증 · 알림 · 배포)을 재사용</strong>해 새 도메인을 빠르게 올립니다. 매번 처음부터 짜지 않기에, 1명이 여러 서비스를 동시에 운영할 수 있는 이유입니다.</p>
         </div>
 
+        <!-- 화면 흐름 탭 — 3앱 실제 캡처 (데모 데이터) -->
+        <div class="shots" id="shots">
+            <div class="shots-bar">
+                <div class="shots-tabs" role="tablist" aria-label="앱 화면 미리보기">
+                    <button class="shots-tab is-active" type="button" role="tab" aria-selected="true" data-shot="teamhub">TeamHub</button>
+                    <button class="shots-tab" type="button" role="tab" aria-selected="false" data-shot="cashpulse">CashPulse</button>
+                    <button class="shots-tab" type="button" role="tab" aria-selected="false" data-shot="lease">haru-lease</button>
+                </div>
+                <span class="shots-note">실제 화면 · 데모 데이터</span>
+            </div>
+
+            <div class="shots-panel is-active" data-panel="teamhub" role="tabpanel">
+                <div class="shots-row">
+                    <figure class="shot"><img src="assets/screenshots/teamhub-1-kanban.png" alt="TeamHub 칸반 보드" loading="lazy" width="390" height="844"><figcaption>칸반 보드</figcaption></figure>
+                    <figure class="shot"><img src="assets/screenshots/teamhub-2-chat.png" alt="TeamHub 팀 채팅" loading="lazy" width="390" height="844"><figcaption>팀 채팅</figcaption></figure>
+                    <figure class="shot"><img src="assets/screenshots/teamhub-3-monitor.png" alt="TeamHub 관제센터" loading="lazy" width="390" height="844"><figcaption>관제센터</figcaption></figure>
+                </div>
+            </div>
+
+            <div class="shots-panel" data-panel="cashpulse" role="tabpanel" hidden>
+                <div class="shots-row">
+                    <figure class="shot"><img src="assets/screenshots/cashpulse-1-home.png" alt="CashPulse 홈 · 시그널" loading="lazy" width="390" height="844"><figcaption>홈 · 시그널</figcaption></figure>
+                    <figure class="shot"><img src="assets/screenshots/cashpulse-2-stock.png" alt="CashPulse 종목 상세" loading="lazy" width="390" height="844"><figcaption>종목 상세 · 차트</figcaption></figure>
+                    <figure class="shot"><img src="assets/screenshots/cashpulse-3-watchlist.png" alt="CashPulse 관심 · 평가손익" loading="lazy" width="390" height="844"><figcaption>관심 · 평가손익</figcaption></figure>
+                    <figure class="shot"><img src="assets/screenshots/cashpulse-4-alerts.png" alt="CashPulse 가격 알림" loading="lazy" width="390" height="844"><figcaption>가격 알림</figcaption></figure>
+                </div>
+            </div>
+
+            <div class="shots-panel" data-panel="lease" role="tabpanel" hidden>
+                <div class="shots-row">
+                    <figure class="shot"><img src="assets/screenshots/lease-1-properties.png" alt="haru-lease 매물 목록" loading="lazy" width="390" height="844"><figcaption>매물 목록</figcaption></figure>
+                    <figure class="shot"><img src="assets/screenshots/lease-2-detail.png" alt="haru-lease 매물 상세" loading="lazy" width="390" height="844"><figcaption>매물 상세</figcaption></figure>
+                    <figure class="shot"><img src="assets/screenshots/lease-3-calendar.png" alt="haru-lease 임대 캘린더" loading="lazy" width="390" height="844"><figcaption>임대 캘린더</figcaption></figure>
+                    <figure class="shot"><img src="assets/screenshots/lease-4-announce.png" alt="haru-lease 공지" loading="lazy" width="390" height="844"><figcaption>공지</figcaption></figure>
+                </div>
+            </div>
+        </div>
+
         <article class="project project-highlight">
             <div class="project-index">03</div>
             <div class="project-body">
@@ -660,6 +698,21 @@ const io = new IntersectionObserver((entries) => {
 document.querySelectorAll('section, .project, .exp-card, .contact-card, .tl-item, .philo-card').forEach(el => {
     el.classList.add('fade');
     io.observe(el);
+});
+
+// 화면 흐름 탭 전환
+document.querySelectorAll('.shots-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+        const target = tab.dataset.shot;
+        document.querySelectorAll('.shots-tab').forEach(t => {
+            const on = t === tab;
+            t.classList.toggle('is-active', on);
+            t.setAttribute('aria-selected', on ? 'true' : 'false');
+        });
+        document.querySelectorAll('.shots-panel').forEach(p => {
+            p.hidden = p.dataset.panel !== target;
+        });
+    });
 });
 </script>
 

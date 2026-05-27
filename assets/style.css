@@ -1157,3 +1157,88 @@ section.contact {
     outline-offset: 3px;
     border-radius: 2px;
 }
+
+/* ───────── Personal: 3앱 화면 흐름 탭 (screenshot showcase) ───────── */
+.shots {
+    margin: 0 0 clamp(44px, 7vw, 72px);
+}
+.shots-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: clamp(18px, 3vw, 26px);
+}
+.shots-tabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.shots-tab {
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: var(--ink-3);
+    background: transparent;
+    border: 1px solid var(--rule-str);
+    border-radius: 999px;
+    padding: 0.5em 1.05em;
+    cursor: pointer;
+    transition: color 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+.shots-tab:hover {
+    color: var(--ink-2);
+    border-color: var(--rule-strong);
+}
+.shots-tab.is-active {
+    color: var(--bg);
+    background: var(--ink);
+    border-color: var(--ink);
+}
+.shots-tab:focus-visible {
+    outline: 2px solid var(--ink-3);
+    outline-offset: 3px;
+}
+.shots-note {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-4);
+}
+.shots-panel[hidden] { display: none; }
+.shots-row {
+    display: flex;
+    gap: clamp(12px, 2vw, 20px);
+    overflow-x: auto;
+    padding-bottom: 12px;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--rule-str) transparent;
+}
+.shots-row::-webkit-scrollbar { height: 6px; }
+.shots-row::-webkit-scrollbar-thumb { background: var(--rule-str); border-radius: 999px; }
+.shot {
+    flex: 0 0 auto;
+    width: clamp(152px, 44vw, 198px);
+    margin: 0;
+    scroll-snap-align: start;
+}
+.shot img {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #fff;
+    border: 1px solid var(--rule-strong);
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+.shot figcaption {
+    margin-top: 0.7em;
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    color: var(--ink-3);
+    text-align: center;
+}
