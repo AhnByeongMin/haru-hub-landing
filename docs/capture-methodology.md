@@ -127,3 +127,22 @@ await page.screenshot({ path: out, fullPage:false });
 
 - 이미지: `assets/screenshots/{app}-{n}-{desc}.png` (lease 4·cashpulse 4·teamhub 3 = 11장).
 - UI: index.html `.shots`(탭) + `assets/style.css` `.shots*` + 하단 script 탭 토글.
+
+---
+
+## 8. 흐름 영상 (WebM) 녹화 — 특화점 중심
+
+정적 캡처는 "화면 나열"이라, 각 앱의 **특장점을 흐름(모션)으로** 보여주려 WebM 루프를 추가.
+
+- **도구**: puppeteer `page.screencast({path})` (v22+). **ffmpeg 필요** (Rocky: `sudo dnf install -y ffmpeg-free`). 출력 VP9 WebM, 390×844, ~0.7~1.3MB/영상.
+- **포맷 결정**: GIF는 웹에 부적합(앱당 수 MB). **WebM `<video autoplay muted loop playsinline preload=none>`** + poster=시작 프레임 PNG. 랜딩 `.shot-flow` figure 로 폰 프레임에 삽입(`.shots-row` 첫 칸).
+- **녹화 패턴**: `localStorage` 토큰 주입 → `goto` → `screencast 시작` → 스크립트된 인터랙션(부드러운 스크롤 `scrollTo{behavior:smooth}` + 화면 전환) → `rec.stop()`.
+- **함정**:
+  - **SPA 카드/행 클릭이 안 먹을 때 많음**(watchlist 종목·kanban 카드) → 해당 화면은 **`goto` 직접 이동**이 신뢰성↑(전환은 컷이지만 슬라이드처럼 읽힘). 칸반 이슈는 **접힌 컬럼**이면 클릭 불가.
+  - 탭 전환은 네이티브 `.click()` 대신 **bbox 중심 `page.mouse.click`**. 단 cashpulse 종목상세 **재무 탭은 swipe형이라 클릭 안 먹음** → 스크롤로 대체.
+  - 검증은 `ffmpeg`로 프레임 추출(`select='eq(n\,N)'`) / 컨택트시트(`tile=Nx1`) 후 눈으로.
+- **앱별 특화점 흐름** (정본):
+  - **TeamHub** = 히스토리·연결성: 칸반 → 이슈 상세(댓글 → **히스토리 탭**=상태전환·활동 이력) → 드라이브(프로젝트 폴더) → 관제센터(시스템 헬스). 데모 재생성 시 이슈 **다단계 상태전환 + 댓글**로 이력 보강.
+  - **CashPulse** = 인사이트 밀도: 관심(평가손익) → 종목상세(차트 + **강점·시그널 분석**·별점 지표).
+  - **haru-lease** = 살아있는 계약: 매물 목록 → 매물 상세 → **계약 변경 이력 타임라인**(월세인상·연장·특약·보증금조정). revision은 `PATCH /leases/{id}`가 자동 생성하나 **endDate PATCH가 403 나는 케이스 있음(미규명 — 추후 확인)** → 데모는 `lease_revisions` 직접 insert(snapshot JSON+summary)로 일관 스토리 구성.
+- **산출물**: `assets/media/{app}-flow.webm` 3종. lease 데모는 contract(역삼 502호 lease 1) revision 보강 상태 유지(가공·무해), cashpulse 데모 user 유지, **teamhub 데모는 매 녹화마다 재생성→전량삭제**.
