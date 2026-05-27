@@ -31,7 +31,9 @@
      ⚠️ 캡처 검증 중 발견: 첫 매물 '우리집'이 **실주소 + 엑셀 사진**이라 못 씀 → 가짜매물(망원동, 사진없어 색 placeholder)로 교체.
      ✅ **lease-4 공지(`announce`) 재캡처 완료 (2026-05-27)** — 기존 'ㅇ/ㅇ' 1건 → 데모 공지 4건 보강(엘리베이터 점검·누수예방·주차장 도색·청소일정, ALL/GROUP 혼합, 최신순). 직접 DB insert(실유저 푸시 안 나감). 데모 공지는 캡처 후 DB에 유지(가공 내용·외부 임차인 0이라 무해). 카드에 그룹 실명·연락처·실주소 노출 없음 확인.
    - (구) "안병민 그대로 OK" 판단은 틀렸음 — 실주소 섞여 있어 데모 처리 필요했음.
-   - cashpulse: 본인 관심종목 = 실데이터 → 데모 user + 더미 watchlist/알림 (DB insert or 가입+입력).
+   - cashpulse: ✅ **캡처 4장 완료 (2026-05-27)**(홈/종목상세/관심/알림, `assets/screenshots/cashpulse-*.png`). 자체 signup 비활성(410 OAuth전용)이라 **데모 user DB insert**(`users` id9 `demo@haru-hub.com` 닉='데모 투자자' provider='demo' — UI 로그인 불가·inert) + HS256 JWT 수동발급(secret<32B→SHA256) 후 **watchlist 5종/알림 3건 API 입력**(삼성·SK하이닉스·NAVER·카카오·LG엔솔, 공개종목이라 무해). 평가손익=가상 매수원가/수량. 데모 user·데이터 캡처 후 DB 유지(격리·inert·재캡처용).
+     ⚠️ **캡처 환경 함정 2개 (해결)**: ① 하단 nav 등 아이콘이 이모지(🏠🏆📅★🔔)인데 헤드리스 chromium에 이모지폰트 없어 `≡` tofu 폴백 → `~/.fonts/NotoColorEmoji.ttf` 유저설치(sudo無)+fc-cache로 해결. ② PWA "설치" 배너가 콘텐츠 가림 → localStorage `cashpulse:install-dismissed` 주입으로 숨김. 캡처 스크립트=`/tmp/cap-cp.js`(cp_access+cp_user JSON+배너dismiss 주입).
+     🐛 **발견 버그(미수정)**: 음수 평가손익/괴리 금액이 소수 4자리로 표시(`-527,500.0000`, 이익은 `+1,260,000` 깔끔). 음수 포맷 미절삭. 코드+배포 별건이라 보류 — 별도 수정 시 재캡처.
    - teamhub: 실유저 23 → 데모 user + 더미 프로젝트/칸반/채팅.
    - ⚠️ OAuth 앱(cashpulse/lease)은 데모 user를 **DB insert** 후 JWT 발급이 가입 우회로 간편(OAuth 자동화 회피).
    - 더미 입력하며 회원가입·입력 흐름 **버그도 같이 체크**(사용자 기대).
