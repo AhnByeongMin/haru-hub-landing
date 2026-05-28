@@ -1262,17 +1262,30 @@ section.contact {
     text-align: center;
 }
 @media (min-width: 880px) {
-    .hero-inner { display: flex; align-items: center; gap: clamp(36px, 5vw, 72px); }
+    .hero-inner { display: flex; align-items: center; gap: clamp(28px, 4vw, 56px); }
     .hero-text { flex: 1 1 0; min-width: 0; }
     .hero-visual { display: block; flex: 0 0 auto; }
-    .hero-visual img {
+    /* 옵션 D — 메인 1장 + 썸네일 2장 (메시지: 여러 개 + 임팩트) */
+    .hv-stage { display: flex; align-items: stretch; gap: 10px; }
+    .hv-main {
         display: block;
-        width: clamp(196px, 17vw, 232px);
+        width: clamp(168px, 14vw, 200px);
         height: auto;
         border-radius: 22px;
         border: 1px solid var(--rule-strong);
         background: #fff;
         box-shadow: 0 28px 64px rgba(0, 0, 0, 0.5);
+    }
+    .hv-thumbs { display: flex; flex-direction: column; gap: 10px; justify-content: space-between; }
+    .hv-thumbs img {
+        display: block;
+        width: clamp(72px, 6.4vw, 92px);
+        height: auto;
+        border-radius: 12px;
+        border: 1px solid var(--rule-str);
+        background: #fff;
+        box-shadow: 0 14px 32px rgba(0, 0, 0, 0.45);
+        opacity: 0.92;
     }
 }
 
