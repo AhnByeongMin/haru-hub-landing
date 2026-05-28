@@ -49,6 +49,8 @@
             제거하는 개발자.
         </h1>
 
+        <p class="hero-slogan">핵심만. 필요하면 <em>펼쳐서</em>.</p>
+
         <div class="hero-lede">
             <p>
                 실제 콜센터 업무를 분석해 <mark>CRM 자동화 시스템</mark>과 운영 웹앱을 구축했고,
@@ -196,6 +198,8 @@
                 <p>반복은 시스템이, 사람은 판단에 집중.</p>
             </div>
         </div>
+
+        <p class="philo-meta"><span class="philo-meta-dash">—</span> 이 소개 페이지도 같은 원칙입니다. <strong>핵심만 보이고, 필요하면 펼쳐서.</strong></p>
     </div>
 </section>
 
@@ -228,10 +232,9 @@
                 </div>
                 <h3>CRM 분석 자동화 워크스페이스 — RIA 사이트를 정복하다</h3>
                 <p class="project-lead">
-                    표준 웹 자동화가 통하지 않는 <strong>바디프랜드 CRM(Nexacro RIA) 사이트</strong>를
-                    Playwright로 셀렉터·그리드·콤보 단위까지 자동 조작.
-                    <strong>조회 → 다운로드 → 다차원 분석 → 리포트</strong>를 클릭 한 번으로 처리하고,
-                    데스크톱(PyQt6) 앱에서 <strong>팀 공용 웹(FastAPI·Docker)</strong>까지 확장했습니다.
+                    표준 웹 자동화가 통하지 않는 바디프랜드 CRM(Nexacro RIA)을 Playwright로 정복해,
+                    <strong>조회→분석→리포트를 클릭 한 번</strong>으로 끝냅니다.
+                    데스크톱(PyQt6)에서 팀 공용 웹(FastAPI·Docker)까지 확장.
                 </p>
 
                 <div class="kpi-table">
@@ -271,28 +274,27 @@
                     </div>
                 </div>
 
-                <ul class="project-bullets">
-                    <li><strong>RIA 자동화 엔진</strong> — 표준 자동화가 안 통하는 사이트를 셀렉터·클릭·입력·그리드·콤보 단위로 정복 (DOM 덤프 기반 디버깅 방법론 정립)</li>
-                    <li><strong>5종 자동화 리포트</strong> — 일일·주간 매출, 연계 실적, 예약·체험·신규, 미배송 체크</li>
-                    <li><strong>다차원 분석 → Excel·대시보드 자동 생성</strong> — 보고 양식 그대로</li>
-                    <li><strong>데스크톱(PyQt6) → 팀 공용 웹앱(FastAPI · Docker)</strong> 확장 배포</li>
-                    <li><strong>자체 인증(bcrypt) · Redis 잡 영속 · 실시간 진행(SSE) · 동시접속 제어(분산 락)</strong></li>
-                    <li><strong>월별·제품별·온라인 매출목표 CRUD</strong></li>
-                    <li><strong>미배송 건 가시화</strong> — 품목·색상·매출을 다차원으로 한눈에</li>
-                </ul>
-
-                <div class="project-note">
-                    <span class="note-label">Note</span>
-                    <p><strong>수작업 조회·집계를 분 단위 자동화로 대체</strong>했습니다. 오전 내내 걸리던 일이 아침 커피 마시는 동안 끝납니다.</p>
-                </div>
-                <div class="project-note">
-                    <span class="note-label">Method</span>
-                    <p><strong>RIA(Nexacro)는 일반 DOM 셀렉터가 통하지 않습니다.</strong> DOM 덤프로 구조를 역분석하고, 그리드·콤보를 단위로 정복하는 자동화 방법론을 직접 정립했습니다.</p>
-                </div>
-                <div class="project-note">
-                    <span class="note-label">Access</span>
-                    <p><strong>실제 운영 중인 사내 업무 툴</strong>이라 폐쇄망 + Tailscale로 외부 노출 없이 운영합니다. 공용 계정 동시 운영은 분산 락으로 안전을 확보했습니다.</p>
-                </div>
+                <details class="proj-more">
+                    <summary>펼쳐서 — 기능 · 방법 · 운영</summary>
+                    <div class="proj-more-body">
+                        <ul class="project-bullets">
+                            <li><strong>RIA 자동화 엔진</strong> — 셀렉터·클릭·그리드·콤보 단위로 정복</li>
+                            <li><strong>5종 자동화 리포트</strong> — 일일·주간 매출, 연계 실적, 예약·체험·신규, 미배송</li>
+                            <li><strong>다차원 분석 → Excel·대시보드 자동 생성</strong> — 보고 양식 그대로</li>
+                            <li><strong>데스크톱(PyQt6) → 팀 공용 웹앱(FastAPI·Docker)</strong> 확장 배포</li>
+                            <li>자체 인증(bcrypt) · Redis 잡 영속 · 실시간 진행(SSE) · 동시접속 분산 락</li>
+                            <li>월별·제품별·온라인 매출목표 CRUD · 미배송 건 다차원 가시화</li>
+                        </ul>
+                        <div class="project-note">
+                            <span class="note-label">Method</span>
+                            <p><strong>RIA(Nexacro)는 일반 DOM 셀렉터가 안 통합니다.</strong> DOM 덤프로 구조를 역분석해 그리드·콤보 단위 자동화 방법론을 직접 정립했습니다.</p>
+                        </div>
+                        <div class="project-note">
+                            <span class="note-label">Access</span>
+                            <p><strong>실제 운영 중인 사내 업무 툴</strong>이라 폐쇄망 + Tailscale로 외부 노출 없이 운영. 공용 계정 동시 운영은 분산 락으로 안전 확보.</p>
+                        </div>
+                    </div>
+                </details>
             </div>
         </article>
 
@@ -311,17 +313,22 @@
                     콜센터 운영 및 협업을 위한 <strong>내부 웹 애플리케이션</strong>.
                     업무 실행과 관리까지 하나로.
                 </p>
-                <ul class="project-bullets">
-                    <li><strong>KPI 관리</strong> — 상담원 실적을 실시간 반영</li>
-                    <li><strong>사용자/권한 관리</strong> · <strong>할일(Task) 관리</strong></li>
-                    <li><strong>프로모션 관리</strong> · <strong>예약 관리</strong></li>
-                    <li><strong>웹 채팅 (PWA)</strong> — 모바일에서도 네이티브 앱처럼</li>
-                    <li><strong>개인 메모 및 보조 기능</strong></li>
-                </ul>
-                <div class="project-note">
-                    <span class="note-label">Design</span>
-                    <p><strong>실무 흐름 중심 설계 · 불필요한 기능 제거 · 직관적 UI/UX</strong>. "사용자가 쓰기 쉬운가"가 유일한 기준.</p>
-                </div>
+                <details class="proj-more">
+                    <summary>펼쳐서 — 기능 · 설계</summary>
+                    <div class="proj-more-body">
+                        <ul class="project-bullets">
+                            <li><strong>KPI 관리</strong> — 상담원 실적을 실시간 반영</li>
+                            <li>사용자/권한 관리 · 할일(Task) 관리</li>
+                            <li>프로모션 관리 · 예약 관리</li>
+                            <li><strong>웹 채팅 (PWA)</strong> — 모바일에서도 네이티브 앱처럼</li>
+                            <li>개인 메모 및 보조 기능</li>
+                        </ul>
+                        <div class="project-note">
+                            <span class="note-label">Design</span>
+                            <p><strong>실무 흐름 중심 · 불필요한 기능 제거 · 직관적 UI/UX</strong>. "사용자가 쓰기 쉬운가"가 유일한 기준.</p>
+                        </div>
+                    </div>
+                </details>
             </div>
         </article>
     </div>
@@ -405,38 +412,42 @@
                     프론트·API·DB·배포·도메인·장애 대응까지 혼자 설계했습니다.
                 </p>
 
-                <div class="stack-grid">
-                    <div class="stack-col">
-                        <h4 class="stack-head">Services</h4>
-                        <ul>
-                            <li>프로젝트 · 칸반 관리</li>
-                            <li>게시판 · 드라이브 (1GB 업로드)</li>
-                            <li>실시간 채팅 (WebSocket)</li>
-                            <li>캘린더 · 개인 할일</li>
-                            <li>AI 업무 비서 (자체 호스팅 LLM)</li>
-                            <li>관리자 · 관제 · 알림 (Web Push)</li>
-                        </ul>
+                <details class="proj-more">
+                    <summary>펼쳐서 — 기능 · 인프라 · 운영</summary>
+                    <div class="proj-more-body">
+                        <div class="stack-grid">
+                            <div class="stack-col">
+                                <h4 class="stack-head">Services</h4>
+                                <ul>
+                                    <li>프로젝트 · 칸반 관리</li>
+                                    <li>게시판 · 드라이브 (1GB 업로드)</li>
+                                    <li>실시간 채팅 (WebSocket)</li>
+                                    <li>캘린더 · 개인 할일</li>
+                                    <li>AI 업무 비서 (자체 호스팅 LLM)</li>
+                                    <li>관리자 · 관제 · 알림 (Web Push)</li>
+                                </ul>
+                            </div>
+                            <div class="stack-col">
+                                <h4 class="stack-head">Infrastructure</h4>
+                                <ul>
+                                    <li>Proxmox 가상화 + LXC/Docker</li>
+                                    <li>nginx · HAProxy 다중 라우팅</li>
+                                    <li>Blue-Green 무중단 배포</li>
+                                    <li>GitHub Actions CI/CD</li>
+                                    <li>도메인 이중화 (DDNS 장애 대응)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="project-note">
+                            <span class="note-label">Ops</span>
+                            <p><strong>기존 Jenkins+Shell의 불완전 배포 → 테스트 실패 시 자동 차단·무중단 배포</strong>로 개선. 장애 분석·대응 경험까지.</p>
+                        </div>
+                        <div class="project-note">
+                            <span class="note-label">Self-hosted AI</span>
+                            <p><strong>외부 API 없이 자체 호스팅 LLM으로 AI 업무 비서를 구현</strong>. 작은 로컬 모델을 하니스 기법으로 끌어올려 검색·데이터·태스크 모드를 붙이고, 매일 자동 회귀 평가로 품질 관리.</p>
+                        </div>
                     </div>
-                    <div class="stack-col">
-                        <h4 class="stack-head">Infrastructure</h4>
-                        <ul>
-                            <li>Proxmox 가상화 + LXC/Docker</li>
-                            <li>nginx · HAProxy 다중 라우팅</li>
-                            <li>Blue-Green 무중단 배포</li>
-                            <li>GitHub Actions CI/CD</li>
-                            <li>도메인 이중화 (DDNS 장애 대응)</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="project-note">
-                    <span class="note-label">Ops</span>
-                    <p><strong>기존 Jenkins+Shell의 불완전 배포 → 테스트 실패 시 자동 차단·무중단 배포</strong>로 개선. 장애 분석·대응 경험까지 포함.</p>
-                </div>
-                <div class="project-note">
-                    <span class="note-label">Self-hosted AI</span>
-                    <p><strong>외부 API 없이 자체 호스팅 LLM으로 AI 업무 비서를 구현</strong>했습니다. 작은 로컬 모델을 하니스 기법으로 끌어올려 검색·데이터·태스크 모드를 붙이고, 매일 자동 회귀 평가로 답변 품질을 관리합니다.</p>
-                </div>
+                </details>
                 <a href="https://haru-hub.com/teamhub" class="project-link" target="_blank" rel="noopener">
                     <span>실제 운영 중 — haru-hub.com</span>
                     <span class="link-arrow" aria-hidden="true">↗</span>
@@ -464,35 +475,39 @@
                     거래량 z-score·재무 이상·공시 AI 요약을 한 화면에 모은 모바일 우선 PWA.
                 </p>
 
-                <div class="stack-grid">
-                    <div class="stack-col">
-                        <h4 class="stack-head">Services</h4>
-                        <ul>
-                            <li>한·미 통합 종목 검색 · 랭킹</li>
-                            <li>가격 알림 (Web Push, VAPID)</li>
-                            <li>관심 종목 · 평가손익 자동 집계</li>
-                            <li>공시 자동 요약 · AI 브리핑</li>
-                            <li>분기 실적 발표 캘린더</li>
-                            <li>PWA 설치 (iOS/Android)</li>
-                        </ul>
+                <details class="proj-more">
+                    <summary>펼쳐서 — 기능 · 데이터 파이프라인</summary>
+                    <div class="proj-more-body">
+                        <div class="stack-grid">
+                            <div class="stack-col">
+                                <h4 class="stack-head">Services</h4>
+                                <ul>
+                                    <li>한·미 통합 종목 검색 · 랭킹</li>
+                                    <li>가격 알림 (Web Push, VAPID)</li>
+                                    <li>관심 종목 · 평가손익 자동 집계</li>
+                                    <li>공시 자동 요약 · AI 브리핑</li>
+                                    <li>분기 실적 발표 캘린더</li>
+                                    <li>PWA 설치 (iOS/Android)</li>
+                                </ul>
+                            </div>
+                            <div class="stack-col">
+                                <h4 class="stack-head">Data Pipeline</h4>
+                                <ul>
+                                    <li>4-tier US 폴백 (FMP → SimFin → yfinance → TwelveData)</li>
+                                    <li>DART KR 공시 수집</li>
+                                    <li>KR 2,637 · US 503 종목 가격 풀</li>
+                                    <li>Redis pub/sub 실시간 알림 (&lt;1s)</li>
+                                    <li>자체 호스팅 Ollama AI (Gemma)</li>
+                                    <li>cron 자동화 · Flyway 마이그레이션</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="project-note">
+                            <span class="note-label">Philosophy</span>
+                            <p><strong>"기능을 더하지 않고, 봐야 할 것만 남긴다"</strong> — 7원칙으로 신규 기능을 자체 검증. 카드·랭킹·알림 모두 한 손 스크롤 안에 들어오도록 설계.</p>
+                        </div>
                     </div>
-                    <div class="stack-col">
-                        <h4 class="stack-head">Data Pipeline</h4>
-                        <ul>
-                            <li>4-tier US 폴백 (FMP → SimFin → yfinance → TwelveData)</li>
-                            <li>DART KR 공시 수집</li>
-                            <li>KR 2,637 · US 503 종목 가격 풀</li>
-                            <li>Redis pub/sub 실시간 알림 (&lt;1s)</li>
-                            <li>자체 호스팅 Ollama AI (Gemma)</li>
-                            <li>cron 자동화 · Flyway 마이그레이션</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="project-note">
-                    <span class="note-label">Philosophy</span>
-                    <p><strong>"기능을 더하지 않고, 봐야 할 것만 남긴다"</strong> — 7원칙으로 신규 기능을 자체 검증. 카드·랭킹·알림 모두 한 손 스크롤 안에 들어오도록 설계했습니다.</p>
-                </div>
+                </details>
                 <a href="https://cashpulse.haru-hub.com" class="project-link" target="_blank" rel="noopener">
                     <span>실제 운영 중 — cashpulse.haru-hub.com</span>
                     <span class="link-arrow" aria-hidden="true">↗</span>
@@ -520,39 +535,43 @@
                     <strong>실제 임대 운영</strong>에 맞춰 직접 설계했습니다.
                 </p>
 
-                <div class="stack-grid">
-                    <div class="stack-col">
-                        <h4 class="stack-head">Services</h4>
-                        <ul>
-                            <li>매물 관리 (사진·옵션·전월세·주소검색)</li>
-                            <li>계약 — 전월세 전환·특약·납부·컨디션 사진</li>
-                            <li>임차인 초대(OAuth) · 임차인 전용 화면</li>
-                            <li>공개 홍보링크 · 문서 버전 관리</li>
-                            <li>공지 + 푸시 알림 (Web Push)</li>
-                            <li>임대 캘린더 (계약·월세 납입)</li>
-                        </ul>
+                <details class="proj-more">
+                    <summary>펼쳐서 — 기능 · 보안/인프라</summary>
+                    <div class="proj-more-body">
+                        <div class="stack-grid">
+                            <div class="stack-col">
+                                <h4 class="stack-head">Services</h4>
+                                <ul>
+                                    <li>매물 관리 (사진·옵션·전월세·주소검색)</li>
+                                    <li>계약 — 전월세 전환·특약·납부·컨디션 사진</li>
+                                    <li>임차인 초대(OAuth) · 임차인 전용 화면</li>
+                                    <li>공개 홍보링크 · 문서 버전 관리</li>
+                                    <li>공지 + 푸시 알림 (Web Push)</li>
+                                    <li>임대 캘린더 (계약·월세 납입)</li>
+                                </ul>
+                            </div>
+                            <div class="stack-col">
+                                <h4 class="stack-head">Security &amp; Infra</h4>
+                                <ul>
+                                    <li>역할 위계 (SUPER_ADMIN · LANDLORD · TENANT)</li>
+                                    <li>소유자 단위 데이터 격리</li>
+                                    <li>네이버 · 카카오 OAuth + 자체 JWT</li>
+                                    <li>MinIO 비공개 버킷 (백엔드 프록시 스트림)</li>
+                                    <li>MySQL · Redis · 자가 인프라 공용</li>
+                                    <li>PWA 설치 · 오프라인 폴백</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="project-note">
+                            <span class="note-label">Live</span>
+                            <p><strong>실제 라이브 서비스</strong> — 매물·계약·임차인·공지까지 직접 운영. 현재 <strong>외부 임대인 1명 온보딩</strong> 단계.</p>
+                        </div>
+                        <div class="project-note">
+                            <span class="note-label">Privacy</span>
+                            <p><strong>데이터 격리가 전제</strong>. 모든 API가 소유자를 검증하고, 공개 홍보 페이지는 매입가·상세주소를 의도적으로 제외.</p>
+                        </div>
                     </div>
-                    <div class="stack-col">
-                        <h4 class="stack-head">Security &amp; Infra</h4>
-                        <ul>
-                            <li>역할 위계 (SUPER_ADMIN · LANDLORD · TENANT)</li>
-                            <li>소유자 단위 데이터 격리</li>
-                            <li>네이버 · 카카오 OAuth + 자체 JWT</li>
-                            <li>MinIO 비공개 버킷 (백엔드 프록시 스트림)</li>
-                            <li>MySQL · Redis · 자가 인프라 공용</li>
-                            <li>PWA 설치 · 오프라인 폴백</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="project-note">
-                    <span class="note-label">Live</span>
-                    <p><strong>실제 라이브 서비스</strong> — 매물·계약·임차인·공지까지 임대 관리 전 과정을 직접 운영합니다. 현재 <strong>외부 임대인 1명을 온보딩</strong>하는 단계입니다.</p>
-                </div>
-                <div class="project-note">
-                    <span class="note-label">Privacy</span>
-                    <p><strong>데이터 격리가 전제</strong>입니다. 모든 API가 소유자를 검증하고, 공개 홍보 페이지는 매입가·상세주소를 의도적으로 제외합니다.</p>
-                </div>
+                </details>
                 <a href="https://lease.haru-hub.com" class="project-link" target="_blank" rel="noopener">
                     <span>실제 운영 중 — lease.haru-hub.com</span>
                     <span class="link-arrow" aria-hidden="true">↗</span>
