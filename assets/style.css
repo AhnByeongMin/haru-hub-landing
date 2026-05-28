@@ -1380,7 +1380,8 @@ section.contact {
 .impact-flow-main {
     margin: 0 0 18px;
 }
-.impact-flow-main img {
+.impact-flow-main img,
+.impact-flow-main video {
     display: block;
     width: 100%;
     max-width: 1080px;
