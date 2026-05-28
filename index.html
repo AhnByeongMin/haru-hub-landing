@@ -36,6 +36,7 @@
 <!-- ───────── HERO ───────── -->
 <section id="top" class="hero">
     <div class="container hero-inner">
+        <div class="hero-text">
         <p class="hero-meta">
             <span class="hero-meta-dot" aria-hidden="true"></span>
             <span class="hero-meta-text">Currently running · 실사용 데이터 기반</span>
@@ -51,7 +52,8 @@
         <div class="hero-lede">
             <p>
                 실제 콜센터 업무를 분석해 <mark>CRM 자동화 시스템</mark>과 운영 웹앱을 구축했고,
-                인프라·배포 환경까지 포함한 <mark>서비스 설계·운영 경험</mark>을 보유한 개발자입니다.
+                지금은 <mark>협업 플랫폼 · 재무 PWA · 임대 SaaS</mark>를 인프라·배포까지
+                <strong>혼자서 동시에 설계·운영</strong>하는 개발자입니다.
             </p>
             <div class="hero-cta">
                 <a href="#impact" class="btn btn-primary">성과 보기 &nbsp;↓</a>
@@ -83,6 +85,12 @@
             <span class="hero-meta-sep">·</span>
             <span class="hero-meta-loc">since 2024</span>
         </p>
+        </div><!-- /hero-text -->
+
+        <div class="hero-visual" aria-hidden="true">
+            <img src="assets/screenshots/cashpulse-2-stock.png" alt="" loading="eager" width="390" height="844">
+            <span class="hero-visual-cap">CashPulse · 실데이터 화면</span>
+        </div>
     </div>
     <div class="hero-bg" aria-hidden="true"></div>
 </section>
@@ -238,24 +246,28 @@
                         <div class="kpi-before">수시간</div>
                         <div class="kpi-after">약 10분</div>
                         <div class="kpi-gain">~95%</div>
+                        <div class="kpi-bar" aria-hidden="true"><span style="width:5%"></span></div>
                     </div>
                     <div class="kpi-row">
                         <div>실적 분석</div>
                         <div class="kpi-before">10~20분</div>
                         <div class="kpi-after">1분</div>
                         <div class="kpi-gain">~95%</div>
+                        <div class="kpi-bar" aria-hidden="true"><span style="width:5%"></span></div>
                     </div>
                     <div class="kpi-row">
                         <div>캠페인 분석</div>
                         <div class="kpi-before">1시간</div>
                         <div class="kpi-after">30초</div>
                         <div class="kpi-gain">~99%</div>
+                        <div class="kpi-bar" aria-hidden="true"><span style="width:1.5%"></span></div>
                     </div>
                     <div class="kpi-row">
                         <div>연계 실적 체크</div>
                         <div class="kpi-before">30분+</div>
                         <div class="kpi-after">1분</div>
                         <div class="kpi-gain">~97%</div>
+                        <div class="kpi-bar" aria-hidden="true"><span style="width:3%"></span></div>
                     </div>
                 </div>
 
@@ -382,7 +394,7 @@
                     <span class="tag tag-primary">TeamHub</span>
                     <span class="tag">Next.js</span>
                     <span class="tag">Spring Boot</span>
-                    <span class="tag">Self-hosted LLM</span>
+                    <span class="tag tag-primary">Self-hosted LLM</span>
                     <span class="tag">Proxmox</span>
                     <span class="tag">Docker</span>
                     <span class="tag">GitHub Actions</span>
@@ -422,8 +434,8 @@
                     <p><strong>기존 Jenkins+Shell의 불완전 배포 → 테스트 실패 시 자동 차단·무중단 배포</strong>로 개선. 장애 분석·대응 경험까지 포함.</p>
                 </div>
                 <div class="project-note">
-                    <span class="note-label">AI</span>
-                    <p><strong>작은 로컬 모델을 하니스 기법으로 끌어올렸습니다.</strong> 자체 호스팅 LLM에 검색·데이터·태스크 모드를 붙이고, 매일 자동 회귀 평가로 답변 품질을 관리합니다.</p>
+                    <span class="note-label">Self-hosted AI</span>
+                    <p><strong>외부 API 없이 자체 호스팅 LLM으로 AI 업무 비서를 구현</strong>했습니다. 작은 로컬 모델을 하니스 기법으로 끌어올려 검색·데이터·태스크 모드를 붙이고, 매일 자동 회귀 평가로 답변 품질을 관리합니다.</p>
                 </div>
                 <a href="https://haru-hub.com/teamhub" class="project-link" target="_blank" rel="noopener">
                     <span>실제 운영 중 — haru-hub.com</span>
@@ -535,7 +547,7 @@
 
                 <div class="project-note">
                     <span class="note-label">Live</span>
-                    <p><strong>본인 외 임대인이 실제 매물·계약을 등록·운영 중</strong>입니다. 직접 만든 서비스를 외부 사용자가 실제 업무에 쓰는 단계.</p>
+                    <p><strong>실제 라이브 서비스</strong> — 매물·계약·임차인·공지까지 임대 관리 전 과정을 직접 운영합니다. 현재 <strong>외부 임대인 1명을 온보딩</strong>하는 단계입니다.</p>
                 </div>
                 <div class="project-note">
                     <span class="note-label">Privacy</span>
@@ -654,6 +666,7 @@
             <a href="https://github.com/AhnByeongMin" target="_blank" rel="noopener" class="contact-card">
                 <div class="contact-lbl">GitHub</div>
                 <div class="contact-val">@AhnByeongMin</div>
+                <div class="contact-note">SaaS 소스는 비공개 · 코드는 요청 시 공유</div>
                 <span class="contact-arrow" aria-hidden="true">↗</span>
             </a>
         </div>

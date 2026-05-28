@@ -1247,3 +1247,58 @@ section.contact {
     color: var(--ink-3);
     text-align: center;
 }
+
+/* ───────── 리뷰 개선: hero 대표 화면 · kpi 단축 막대 · contact 정직 노트 ───────── */
+
+/* Hero 대표 화면 — 데스크톱에서만 텍스트 옆 폰 1장 (모바일은 hero 길어져 생략) */
+.hero-visual { display: none; }
+.hero-visual-cap {
+    display: block;
+    margin-top: 12px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    color: var(--ink-4);
+    text-align: center;
+}
+@media (min-width: 880px) {
+    .hero-inner { display: flex; align-items: center; gap: clamp(36px, 5vw, 72px); }
+    .hero-text { flex: 1 1 0; min-width: 0; }
+    .hero-visual { display: block; flex: 0 0 auto; }
+    .hero-visual img {
+        display: block;
+        width: clamp(196px, 17vw, 232px);
+        height: auto;
+        border-radius: 22px;
+        border: 1px solid var(--rule-strong);
+        background: #fff;
+        box-shadow: 0 28px 64px rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* 일일보고 표 — 개선 후 남은 시간 비율 막대 (거의 사라진 막대 = 단축 임팩트) */
+.kpi-bar {
+    grid-column: 1 / -1;
+    height: 4px;
+    margin-top: 9px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.06);
+    overflow: hidden;
+}
+.kpi-bar span {
+    display: block;
+    height: 100%;
+    min-width: 3px;
+    border-radius: 999px;
+    background: var(--live);
+}
+
+/* Contact GitHub — 소스 비공개 정직 프레이밍 */
+.contact-note {
+    margin-top: 6px;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.02em;
+    color: var(--ink-4);
+    line-height: 1.4;
+}
