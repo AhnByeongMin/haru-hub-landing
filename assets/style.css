@@ -1372,3 +1372,71 @@ section.contact {
 .proj-more[open] > summary::after { transform: rotate(180deg); }
 .proj-more > summary:hover { color: var(--ink); }
 .proj-more-body { padding-top: 6px; }
+
+/* ───────── Impact 자동화 시스템 시각 갤러리 (마스킹된 데모 캡처) ───────── */
+.impact-flow {
+    margin: 28px 0 4px;
+}
+.impact-flow-main {
+    margin: 0 0 18px;
+}
+.impact-flow-main img {
+    display: block;
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid var(--rule-strong);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+    background: var(--bg-raised);
+}
+.impact-flow-main figcaption {
+    margin-top: 10px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--ink-3);
+    text-align: center;
+}
+.impact-flow-thumbs {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--rule-str) transparent;
+}
+.impact-flow-thumbs::-webkit-scrollbar { height: 6px; }
+.impact-flow-thumbs::-webkit-scrollbar-thumb { background: var(--rule-str); border-radius: 999px; }
+.impact-flow-thumbs > figure {
+    flex: 0 0 auto;
+    width: clamp(160px, 16vw, 200px);
+    margin: 0;
+    scroll-snap-align: start;
+}
+.impact-flow-thumbs > figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid var(--rule-str);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+    background: var(--bg-raised);
+}
+.impact-flow-thumbs > figure figcaption {
+    margin-top: 7px;
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-3);
+    text-align: center;
+}
+.impact-flow-note {
+    margin: 14px 0 0;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.04em;
+    color: var(--ink-4);
+}
