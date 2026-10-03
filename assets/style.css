@@ -616,7 +616,7 @@ section.contact {
 /* ─────────── Projects (Impact + Personal) ─────────── */
 .project {
     display: grid;
-    grid-template-columns: 68px 1fr;
+    grid-template-columns: 68px minmax(0, 1fr);   /* 영상·썸네일 줄이 칸을 밀어 휴대폰에서 본문이 잘리던 것 방지 */
     gap: 28px;
     padding: 36px 0;
     border-top: 1px solid var(--rule);
@@ -876,7 +876,7 @@ section.contact {
 }
 
 @media (max-width: 720px) {
-    .project { grid-template-columns: 1fr; gap: 16px; padding: 28px 0; }
+    .project { grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 28px 0; }
 }
 
 /* ─────────── Experience ─────────── */
