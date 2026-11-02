@@ -11,7 +11,7 @@
 /* 이 페이지에 쓰인 글자만 담은 Pretendard 부분 파일(약 146KB). 없는 글자는 아래 동적 부분 파일로 넘어감.
    문구를 바꾸면 README 의 "글꼴 부분 파일 다시 만들기" 대로 재생성. */
 @font-face { font-family: "Pretendard Page"; font-style: normal; font-weight: 45 920; font-display: swap;
-  src: url(fonts/pretendard-page-subset.woff2?v=20261102b) format("woff2"); }
+  src: url(fonts/pretendard-page-subset.woff2?v=20261102c) format("woff2"); }
 
 :root {
   color-scheme: dark;
@@ -207,7 +207,7 @@ h3 .chip { vertical-align: middle; margin-left: 4px; }
 .media { margin-top: 24px; }
 .screen-frame { position: relative; border: 1px solid var(--line-strong); border-radius: 12px; overflow: hidden; isolation: isolate; background: var(--bezel); }
 .screen-frame img, .screen-frame video { width: 100%; height: auto; object-fit: cover; }
-.r1200x772 { aspect-ratio: 1200 / 772; } .r1200x857 { aspect-ratio: 1200 / 857; } .r1200x771 { aspect-ratio: 1200 / 771; }
+.r1200x772 { aspect-ratio: 1200 / 772; } .r1200x750 { aspect-ratio: 1200 / 750; } .r1200x857 { aspect-ratio: 1200 / 857; } .r1200x771 { aspect-ratio: 1200 / 771; }
 .media figcaption { margin-top: 8px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; }
 .cap-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .vbtn { min-height: 44px; min-width: 44px; padding: 0 12px; border: 1px solid var(--line-strong); border-radius: 999px; background: transparent; color: var(--ink-2); font: 500 .78125rem var(--mono); }
