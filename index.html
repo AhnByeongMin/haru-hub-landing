@@ -13,12 +13,12 @@
 <meta property="og:title" content="안병민 · 불필요한 업무 과정을 제거하는 빌더">
 <meta property="og:description" content="일일 매출 보고 수시간 → 약 2분. 집 안의 작은 클라우드를 혼자, 꺼지지 않게 운영합니다.">
 <meta property="og:locale" content="ko_KR">
-<link rel="preload" href="assets/fonts/pretendard-page-subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/pretendard-page-subset.woff2?v=20261102b" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/ibm-plex-mono-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/fonts/pretendardvariable-dynamic-subset.css?v=20261102">
-<link rel="stylesheet" href="assets/style.css?v=20261102">
+<link rel="stylesheet" href="assets/fonts/pretendardvariable-dynamic-subset.css?v=20261102b">
+<link rel="stylesheet" href="assets/style.css?v=20261102b">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<script src="assets/app.js?v=20261102" defer></script>
+<script src="assets/app.js?v=20261102b" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">본문 바로가기</a>
@@ -182,11 +182,11 @@
 
     <article class="card" aria-labelledby="crm1-t">
       <p class="meta card-head">01 · 핵심 프로젝트</p>
-      <ul class="chips" aria-label="기술"><li>Python</li><li>Playwright</li><li>PyQt6</li><li>FastAPI</li><li>Redis</li><li>Docker</li></ul>
-      <h3 id="crm1-t">CRM 분석 자동화 — 일반 자동화가 안 통하는 화면을 뚫다</h3>
-      <p class="body">표준 웹 자동화가 통하지 않는 사내 CRM(Nexacro RIA)을 Playwright로 다뤄, 조회 → 분석 → 보고서를 클릭 한 번으로 끝냅니다. 데스크톱 앱(PyQt6)에서 시작해 팀 공용 웹(FastAPI·Docker)으로 넓혔습니다.</p>
+      <ul class="chips" aria-label="기술"><li>Python</li><li>Rust (PyO3)</li><li>FastAPI</li><li>Redis · arq</li><li>Playwright</li><li>Docker</li></ul>
+      <h3 id="crm1-t">CRM 분석 자동화 2.0 — 화면을 누르던 자동화에서, 요청을 직접 주고받는 작업 엔진으로</h3>
+      <p class="body">일반 웹 자동화가 통하지 않는 사내 CRM(넥사크로)을 사람 대신 눌러 주던 1.0에서 시작했습니다. 2.0은 화면이 보내는 조회 요청의 틀을 한 번 잡아 두고 날짜·쪽만 바꿔 응답을 직접 받습니다. 받아서 계산하는 일까지 서버가 끝내는, 여러 사람이 함께 쓰는 웹 작업 엔진입니다. 결과는 1.0과 칸 단위로 같게 유지합니다.</p>
 
-      <p class="tbl-title meta">업무별 걸리던 시간 → 지금</p>
+      <p class="tbl-title meta">업무별 걸리던 시간 → 지금 (사람 손 작업 대비 · 1.0 때 잰 값)</p>
       <table class="tbl">
         <caption class="sr">업무별 걸리던 시간과 지금 걸리는 시간</caption>
         <thead><tr><th scope="col">업무</th><th scope="col" class="c-before">기존</th><th scope="col" class="c-now">지금</th><th scope="col" class="c-both">기존 → 지금</th><th scope="col">줄어든 정도</th></tr></thead>
@@ -200,12 +200,25 @@
         </tbody>
       </table>
 
+      <p class="tbl-title meta">2.0에서 줄인 처리 시간 (서버 실측 · 결과는 예전 방식과 대조해 같음)</p>
+      <table class="tbl">
+        <caption class="sr">2.0에서 바꾼 부분별 처리 시간 전과 후</caption>
+        <thead><tr><th scope="col">무엇을</th><th scope="col" class="c-both">전 → 후</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">응답 해석 (1만 줄 · 32MB)</th><td class="c-both">1쪽 1.7초 → <b>0.29초</b> (5.9배) · 4쪽 동시 7.6초 → <b>0.66초</b> (11.6배)</td></tr>
+          <tr><th scope="row">통계 갱신의 표 만들기</th><td class="c-both">74초 → <b>15초</b> · 전체 4분 01초 → 3분 03초</td></tr>
+          <tr><th scope="row">엑셀 모양 맞추기 (19.6만 줄)</th><td class="c-both">11.1초 → <b>5.3초</b></td></tr>
+          <tr><th scope="row">통계 갱신에 드는 조회 요청</th><td class="c-both">76쪽 → <b>56쪽</b> (받는 건수는 같음)</td></tr>
+          <tr><th scope="row">무거운 작업과 겹칠 때 일보</th><td class="c-both">144초 → <b>51초</b> (혼자 돌릴 때와 같아짐)</td></tr>
+        </tbody>
+      </table>
+
       <figure class="media">
         <div class="screen-frame r1200x772">
           <video data-src="assets/automation/impact-flow.mp4" data-poster="assets/automation/all-tabs.webp" muted playsinline loop preload="none" width="1200" height="772" aria-label="일일 매출 자동화를 실행 버튼부터 엑셀 결과까지 보여 주는 화면 녹화"></video>
           <button class="vplay" type="button" aria-label="영상 재생"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
         </div>
-        <figcaption><span class="small">9종 자동화를 한 화면에서 — 실행 버튼 하나로 로그인·조회·분석·엑셀까지. 영상은 일일 매출, 기다리는 구간은 8배속.</span><span class="cap-row"><span class="chip">8배속 구간 포함</span><button class="vbtn" type="button" aria-pressed="false">정지</button></span></figcaption>
+        <figcaption><span class="small">1.0 화면 — 실행 버튼 하나로 로그인·조회·분석·엑셀까지(일일 매출, 기다리는 구간 8배속). 2.0 화면은 가짜 데이터 시연 서버로 촬영 중입니다.</span><span class="cap-row"><span class="chip">8배속 구간 포함</span><button class="vbtn" type="button" aria-pressed="false">정지</button></span></figcaption>
       </figure>
 
       <div class="gallery" data-gallery>
@@ -223,18 +236,20 @@
       <p class="mask"><span class="chip chip-lamp">데모 데이터</span> 회사 시스템 보호를 위해 회사명·제품명·상담사 이름·실제 영업 수치는 모두 가렸습니다.</p>
 
       <details>
-        <summary>펼쳐서 — 기능 · 방법 · 운영</summary>
+        <summary>펼쳐서 — 2.0 구조 · 쓰는 사람에게 달라진 것 · 1.0</summary>
         <div class="more">
+          <p><span class="mh">구조</span>작업마다 브라우저를 새로 띄우던 방식에서, 계정마다 브라우저 하나를 여러 작업이 나눠 쓰는 탭 엔진 + 작업 대기열(Redis · arq)로. 로그인은 계정당 한 번. 무거운 작업과 가벼운 작업이 겹쳐도 가벼운 쪽이 먼저 자리를 받습니다.</p>
           <ul>
-            <li>RIA 자동화 엔진 — 셀렉터·클릭·그리드·콤보 단위로 다룸</li>
-            <li>자동화 보고서 — 일일·주간 매출, 연계 실적, 예약·체험·신규, 미배송</li>
-            <li>다차원 분석 → 보고 양식 그대로 엑셀·대시보드 자동 생성</li>
-            <li>데스크톱(PyQt6) → 팀 공용 웹앱(FastAPI·Docker) 확장 배포</li>
-            <li>자체 인증(bcrypt) · Redis 작업 보존 · 실시간 진행 표시(SSE) · 동시 접속 분산 잠금</li>
-            <li>월별·제품별·온라인 매출 목표 관리 · 미배송 건 다차원 보기</li>
+            <li>버튼 하나로 끝까지 — 진행 로그가 한 형식(무엇 · 기간 · 건수 · 초)으로 실시간, 끝나면 표·엑셀이 바로</li>
+            <li>같은 조건을 10분 안에 누가 돌렸으면 기다림 없이 그 결과를 받음</li>
+            <li>통계 대시보드 — 아침·저녁 예약 갱신, 기간을 골라 다시 계산</li>
+            <li>프로모션 현황판 — 규칙을 화면에서 조립, 진행 중 순위 · 주간 한눈에 · 공지 캡처 · 수식 포함 엑셀</li>
+            <li>추출의 터치 분류 — 최근 상담 이력을 대조해 이미 연락한 고객을 다시 돌리지 않게</li>
+            <li>어디서나 웹으로 · 관리자는 지문·얼굴(패스키)과 2단계 인증</li>
           </ul>
-          <p><span class="mh">방법</span>RIA(Nexacro)는 일반 DOM 셀렉터가 통하지 않습니다. DOM을 덤프해 구조를 거꾸로 읽고, 그리드·콤보 단위 자동화 방법을 직접 정립했습니다.</p>
-          <p><span class="mh">접근</span>실제 운영 중인 사내 도구라 폐쇄망 + Tailscale로만 쓰고 밖으로는 열지 않습니다. 공용 계정 동시 사용은 분산 잠금으로 막았습니다.</p>
+          <p><span class="mh">신뢰</span>바꿀 때마다 예전 방식과 결과를 칸 단위 · DB 내용 지문까지 대조한 뒤에만 반영합니다. 실패 자동 분류, 받은 조각부터 이어받기. 연락처는 해시로만 저장하고 고객 값은 로그·알림에 남기지 않습니다.</p>
+          <p><span class="mh">1.0</span>넥사크로는 일반 DOM 셀렉터가 통하지 않아, 구조를 거꾸로 읽어 그리드·콤보 단위로 누르는 방법을 직접 정립했습니다(데스크톱 PyQt6 → 팀 공용 웹 FastAPI). 2.0의 요청 틀은 이때 쌓은 이해에서 나왔습니다.</p>
+          <p><span class="mh">접근</span>실제 운영 중인 사내 도구라 폐쇄망 + Tailscale로만 씁니다.</p>
         </div>
       </details>
     </article>
@@ -458,7 +473,7 @@
     <ul class="games">
       <li class="game">
         <!-- S1(하루 온라인 실기기) 자리. 녹화가 오면 app.js CAPTURED 에 s1 한 줄 -->
-        <figure class="device" data-slot="s1">
+        <figure class="device" data-slot="s1" hidden>
           <div class="dev dev-iphone"><div class="screen ph"><p>실기기 녹화<br>준비 중</p></div></div>
           <figcaption class="cap-row"><span class="chip src">녹화 준비 중</span></figcaption>
         </figure>

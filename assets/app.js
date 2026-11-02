@@ -8,9 +8,12 @@ const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
 // 도착한 S-id 를 한 줄 추가하면 assets/device/<id>.mp4 + <id>.webp 로 바뀌고 출처 칩도 바뀝니다.
 // 예) s5: ['실기기 녹화 · iPhone 15 Pro Max'],  s9: ['맥북 사파리 녹화', 'laptop']
 const CAPTURED = {
+  s3: ['모바일 화면 녹화 · 크롬'],
+  s4: ['모바일 화면 녹화 · 크롬 · 내부 주소 가림'],
 };
 for (const [id, [chip, frame]] of Object.entries(CAPTURED)) {
   const f = $(`[data-slot="${id}"]`); if (!f) continue;
+  f.closest('[hidden]')?.removeAttribute('hidden'); f.hidden = false;
   const dev = $('.dev', f), scr = $('.screen', f);
   if (frame) dev.className = 'dev dev-' + frame;
   scr.className = 'screen';
