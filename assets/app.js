@@ -8,6 +8,7 @@ const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
 // 도착한 S-id 를 한 줄 추가하면 assets/device/<id>.mp4 + <id>.webp 로 바뀌고 출처 칩도 바뀝니다.
 // 예) s5: ['실기기 녹화 · iPhone 15 Pro Max'],  s9: ['맥북 사파리 녹화', 'laptop']
 const CAPTURED = {
+  s1: ['시험 서버 · 4인 파티 화면 녹화'],
   s3: ['모바일 화면 녹화 · 크롬'],
   s4: ['모바일 화면 녹화 · 크롬 · 내부 주소 가림'],
 };
