@@ -13,12 +13,12 @@
 <meta property="og:title" content="안병민 · 불필요한 업무 과정을 제거하는 빌더">
 <meta property="og:description" content="일일 매출 보고 수시간 → 약 30초. 집 안의 작은 클라우드를 혼자, 꺼지지 않게 운영합니다.">
 <meta property="og:locale" content="ko_KR">
-<link rel="preload" href="assets/fonts/pretendard-page-subset.woff2?v=20261102c" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/pretendard-page-subset.woff2?v=20261106a" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/ibm-plex-mono-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/fonts/pretendardvariable-dynamic-subset.css?v=20261102c">
-<link rel="stylesheet" href="assets/style.css?v=20261102c">
+<link rel="stylesheet" href="assets/fonts/pretendardvariable-dynamic-subset.css?v=20261106a">
+<link rel="stylesheet" href="assets/style.css?v=20261106a">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<script src="assets/app.js?v=20261102c" defer></script>
+<script src="assets/app.js?v=20261106a" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">본문 바로가기</a>
@@ -64,7 +64,7 @@
       <figcaption class="meta map-title">집 안 서버 · 지금</figcaption>
       <svg class="map" id="map" viewBox="0 0 480 360" role="img" aria-labelledby="map-t map-d">
         <title id="map-t">집 안 서버 지도</title>
-        <desc id="map-d">집 안 서버 지도. Cloudflare에서 대문 두 곳(EQR6 위 LXC 104, T8 N100)을 거쳐 Proxmox 본체 EQR6의 LXC 6개로 이어지고, T8 N100은 CRM 대기 DB와 백업을, 맥북은 로컬 AI 비상 경로를 맡습니다.</desc>
+        <desc id="map-d">집 안 서버 지도. Cloudflare에서 대문 두 곳(EQR6 위 LXC 104, T8 N100)을 거쳐 Proxmox 본체 EQR6의 LXC 8개로 이어지고, T8 N100은 CRM 대기 DB와 백업을, 맥북은 로컬 AI 비상 경로를 맡습니다.</desc>
         <g class="boxes">
           <rect class="depth" x="102" y="18" width="288" height="56" rx="10"/>
           <rect class="b2" x="96" y="12" width="288" height="56" rx="10"/>
@@ -74,19 +74,21 @@
           <rect class="b1" x="332" y="120" width="132" height="96" rx="10"/>
           <rect class="depth" x="338" y="240" width="132" height="90" rx="10"/>
           <rect class="b1" x="332" y="234" width="132" height="90" rx="10"/>
-          <rect class="b2" x="28" y="154" width="136" height="46" rx="6"/>
-          <rect class="b2" x="168" y="154" width="136" height="46" rx="6"/>
-          <rect class="b2" x="28" y="208" width="136" height="46" rx="6"/>
-          <rect class="b2" x="168" y="208" width="136" height="46" rx="6"/>
-          <rect class="b2" x="28" y="262" width="136" height="46" rx="6"/>
-          <rect class="b2" x="168" y="262" width="136" height="46" rx="6"/>
+          <rect class="b2" x="28" y="150" width="136" height="40" rx="6"/>
+          <rect class="b2" x="168" y="150" width="136" height="40" rx="6"/>
+          <rect class="b2" x="28" y="194" width="136" height="40" rx="6"/>
+          <rect class="b2" x="168" y="194" width="136" height="40" rx="6"/>
+          <rect class="b2" x="28" y="238" width="136" height="40" rx="6"/>
+          <rect class="b2" x="168" y="238" width="136" height="40" rx="6"/>
+          <rect class="b2" x="28" y="282" width="136" height="40" rx="6"/>
+          <rect class="b2" x="168" y="282" width="136" height="40" rx="6"/>
         </g>
         <g class="wires">
-          <path d="M146 68V154"/><path d="M372 68V120"/>
-          <path d="M304 231L332 196"/><path d="M304 285L332 279"/>
+          <path d="M146 68V150"/><path d="M372 68V120"/>
+          <path d="M304 214L332 190"/><path d="M304 258L332 279"/>
         </g>
         <g class="trace">
-          <path pathLength="1" d="M146 68V154"/><path pathLength="1" d="M372 68V120"/>
+          <path pathLength="1" d="M146 68V150"/><path pathLength="1" d="M372 68V120"/>
         </g>
         <g id="lamps"></g>
         <g class="lbl lbl-wide">
@@ -94,12 +96,10 @@
           <text x="154" y="92">대문 A · EQR6 위 LXC 104</text>
           <text x="364" y="116" text-anchor="end">대문 B · T8 N100</text>
           <text x="28" y="143">EQR6 본체</text>
-          <text x="38" y="173">104</text><text x="38" y="190">대문</text>
-          <text x="178" y="173">103</text><text x="178" y="190">통합 로그인</text>
-          <text x="38" y="227">105</text><text x="38" y="244">CRM 앱</text>
-          <text x="178" y="227">106</text><text x="178" y="244">CRM DB(주)</text>
-          <text x="38" y="281">101</text><text x="38" y="298">협업·리스·캐시펄스</text>
-          <text x="178" y="281">107</text><text x="178" y="298">AI 게이트웨이</text>
+          <text x="38" y="166">104</text><text x="38" y="182">대문</text><text x="178" y="166">103</text><text x="178" y="182">통합 로그인</text>
+          <text x="38" y="210">105</text><text x="38" y="226">CRM 앱</text><text x="178" y="210">106</text><text x="178" y="226">CRM DB(주)</text>
+          <text x="38" y="254">101</text><text x="38" y="270">협업·리스·캐시펄스</text><text x="178" y="254">107</text><text x="178" y="270">AI 게이트웨이</text>
+          <text x="38" y="298">108</text><text x="38" y="314">TeamHub 2</text><text x="178" y="298">110</text><text x="178" y="314">집 자동화</text>
           <text x="344" y="143">T8 N100</text><text x="344" y="168">CRM DB 대기</text><text x="344" y="188">백업 보관</text>
           <text x="344" y="257">맥북</text><text x="344" y="282">로컬 AI</text><text x="344" y="302">비상 경로</text>
         </g>
@@ -108,12 +108,10 @@
           <text x="154" y="96">대문 A</text>
           <text x="364" y="114" text-anchor="end">대문 B</text>
           <text x="28" y="145">EQR6 본체</text>
-          <text x="38" y="183">104 대문</text>
-          <text x="178" y="183">103 로그인</text>
-          <text x="38" y="237">105 CRM앱</text>
-          <text x="178" y="237">106 CRM DB</text>
-          <text x="38" y="291">101 협업 외</text>
-          <text x="178" y="291">107 AI</text>
+          <text x="38" y="176">104 대문</text><text x="178" y="176">103 로그인</text>
+          <text x="38" y="220">105 CRM앱</text><text x="178" y="220">106 CRM DB</text>
+          <text x="38" y="264">101 협업 외</text><text x="178" y="264">107 AI</text>
+          <text x="38" y="308">108 협업2</text><text x="178" y="308">110 집</text>
           <text x="344" y="146">T8 N100</text><text x="344" y="172">DB 대기</text><text x="344" y="196">백업</text>
           <text x="344" y="260">맥북</text><text x="344" y="286">로컬 AI</text><text x="344" y="310">비상</text>
         </g>
@@ -152,7 +150,7 @@
         <p class="when">Now</p>
         <div><h3>운영까지 혼자 책임지다</h3>
         <p class="where">집 안 클라우드 · 상담 CRM 2.0 · 개인 서비스 4종 · 게임 3종</p>
-        <p>Proxmox 서버 한 대 위에 LXC 6개로 협업·인증·대문·CRM·AI 게이트웨이를 나눠 올리고, 대문은 물리적으로 다른 두 기계에 두어 한쪽이 꺼져도 열려 있게 했습니다. 서비스들은 통합 로그인·AI·알림·저장소를 공용 블록으로 나눠 쓰고, 상태판처럼 새로 만드는 독립 부품은 러스트로 짓습니다.</p></div>
+        <p>Proxmox 서버 한 대 위에 LXC 8개로 협업·인증·대문·CRM·AI 게이트웨이·집 자동화를 나눠 올리고, 대문은 물리적으로 다른 두 기계에 두어 한쪽이 꺼져도 열려 있게 했습니다. 서비스들은 통합 로그인·AI·알림·저장소를 공용 블록으로 나눠 쓰고, 상태판처럼 새로 만드는 독립 부품은 러스트로 짓습니다.</p></div>
       </li>
     </ol>
   </div>
@@ -184,19 +182,28 @@
       <p class="meta card-head">01 · 핵심 프로젝트</p>
       <ul class="chips" aria-label="기술"><li>Python</li><li>Rust (PyO3)</li><li>FastAPI</li><li>Redis · arq</li><li>Playwright</li><li>Docker</li></ul>
       <h3 id="crm1-t">CRM 분석 자동화 2.0 — 화면을 누르던 자동화에서, 요청을 직접 주고받는 작업 엔진으로</h3>
-      <p class="body">일반 웹 자동화가 통하지 않는 사내 CRM(넥사크로)을 사람 대신 눌러 주던 1.0에서 시작했습니다. 2.0은 화면이 보내는 조회 요청의 틀을 한 번 잡아 두고 날짜·쪽만 바꿔 응답을 직접 받습니다. 받아서 계산하는 일까지 서버가 끝내는, 여러 사람이 함께 쓰는 웹 작업 엔진입니다. 결과는 1.0과 칸 단위로 같게 유지합니다.</p>
+      <p class="body">일반 웹 자동화가 통하지 않는 사내 CRM(넥사크로)을 사람 대신 눌러 주던 1.0에서 시작했습니다. 2.0은 화면이 보내는 조회 요청의 틀을 한 번 잡아 두고 날짜·쪽만 바꿔 응답을 직접 받고, 계산까지 서버가 끝내는 여러 사람이 함께 쓰는 웹 작업 엔진입니다. 11월 2일, 메뉴마다 1.0 결과와 칸 단위로 대조한 뒤 1.0을 정리하고 2.0만 운영합니다. 새 계산은 운영 복사본에서 돌려 다른 칸이 0개일 때만 넣습니다.</p>
 
-      <p class="tbl-title meta">업무별 걸리던 시간(사람 손) → 지금(2.0 자동 실행 · 11월 실행 기록)</p>
+      <p class="tbl-title meta">대표 사례 · 연계 터치 확인 (사용 기록 10/22~11/6)</p>
+      <p class="lead-case">날짜 하루치마다 반나절 걸리던 연계 실적 확인 <span class="arr">→</span> <b>한 달치 4분</b>, 사람은 남은 1%만 확인.</p>
+      <p class="small">하루치마다 반나절이 걸려 하루만 밀려도 다음 날 일이 두 배가 됐고, 쌓일수록 따라잡기 어려웠습니다. 지금은 한 달치를 하루에 몰아서 해도 됩니다(실행 약 4분 + 남은 1% 확인). 밀리면 쌓이던 확인 업무가 몰아서 해도 되는 일이 됐습니다.</p>
+      <ul class="dash">
+        <li><b>이전</b> 전체 계약에서 우리 것이 아닌 계약과 외부 채널 상담사 건을 거르고, 남은 계약을 하나씩 열어 우리 팀이 먼저 터치했는지 확인했습니다. 영업일 하루치마다 한 명이 반나절 이상.</li>
+        <li><b>2.0</b> 거르기부터 터치 확인(고객번호·연락처 대조)까지 자동. 한 달치 1회 실행 약 4분(최근 62회 중앙값 4분 16초).</li>
+        <li><b>11/6 실측</b> 약 26영업일치 원본 약 2.4만 건 → 자동 거르기 뒤 약 7천 건 → 자동 확정 53건, 사람이 볼 '확인 필요' 236건(원본의 약 1%). 사람 기준 13인일 이상이 '실행 4분 + 남은 1% 확인'으로 줄었습니다.</li>
+      </ul>
+
+      <p class="tbl-title meta">업무별 걸리던 시간(사람 손) → 지금(2.0 자동 실행 · 10~11월 사용·실행 기록)</p>
       <table class="tbl">
         <caption class="sr">업무별 걸리던 시간과 지금 걸리는 시간</caption>
         <thead><tr><th scope="col">업무</th><th scope="col" class="c-before">기존</th><th scope="col" class="c-now">지금</th><th scope="col" class="c-both">기존 → 지금</th><th scope="col">줄어든 정도</th></tr></thead>
         <tbody>
+          <tr><th scope="row">연계 터치 확인</th><td class="c-before">하루치마다 반나절 이상</td><td class="c-now">한 달치 약 4분 + 남은 1% 확인</td><td class="c-both">하루치마다 반나절 이상 → <b>한 달치 약 4분</b> + 남은 1% 확인</td><td class="gain">사람 몫 약 1%<i aria-hidden="true" style="--w:99%"></i></td></tr>
           <tr><th scope="row">일일 매출 보고</th><td class="c-before">수시간</td><td class="c-now">약 30초</td><td class="c-both">수시간 → <b>약 30초</b></td><td class="gain">99% 넘게<i aria-hidden="true" style="--w:99.5%"></i></td></tr>
           <tr><th scope="row">주간 매출 보고</th><td class="c-before">반나절</td><td class="c-now">약 50초</td><td class="c-both">반나절 → <b>약 50초</b></td><td class="gain">99% 넘게<i aria-hidden="true" style="--w:99.5%"></i></td></tr>
           <tr><th scope="row">미배송 점검</th><td class="c-before">30분~1시간</td><td class="c-now">약 15초</td><td class="c-both">30분~1시간 → <b>약 15초</b></td><td class="gain">약 99%<i aria-hidden="true" style="--w:99%"></i></td></tr>
           <tr><th scope="row">예약 체험 신규 조회</th><td class="c-before">30분~1시간</td><td class="c-now">약 20초</td><td class="c-both">30분~1시간 → <b>약 20초</b></td><td class="gain">약 99%<i aria-hidden="true" style="--w:99%"></i></td></tr>
           <tr><th scope="row">상담원 실적</th><td class="c-before">30분~1시간</td><td class="c-now">약 15초</td><td class="c-both">30분~1시간 → <b>약 15초</b></td><td class="gain">약 99%<i aria-hidden="true" style="--w:99%"></i></td></tr>
-          <tr><th scope="row">연계 실적 체크</th><td class="c-before">30분 이상</td><td class="c-now">약 2분 30초</td><td class="c-both">30분 이상 → <b>약 2분 30초</b> (1.0 값)</td><td class="gain">약 92%<i aria-hidden="true" style="--w:92%"></i></td></tr>
         </tbody>
       </table>
 
@@ -212,7 +219,6 @@
           <tr><th scope="row">상담사별 분석</th><td class="c-both">70초 → <b>26초</b> (약 2.7배)</td></tr>
         </tbody>
       </table>
-      <p class="small">속을 바꾼 결과 — 응답 해석을 Rust 확장으로 바꿔 5.9배(동시 11.6배), 통계 갱신 조회 요청 76쪽 → 56쪽, 엑셀 모양 맞추기 2배. 바꿀 때마다 예전 방식과 결과를 칸 단위로 대조해 같을 때만 반영했습니다. 같은 조건을 10분 안에 다시 부르면 기다림 없이 바로 결과가 나옵니다.</p>
 
       <figure class="media">
         <div class="screen-frame r1200x750">
@@ -236,7 +242,7 @@
       <p class="mask"><span class="chip chip-lamp">가짜 데이터 시연 서버</span> 실제 운영 데이터 없이 시연용 서버에서 찍었습니다. 상담사·금액·건수는 가짜 값이고, 회사·시스템·제품 이름은 바꾸거나 흐리게 가렸습니다.</p>
 
       <details>
-        <summary>펼쳐서 — 2.0 구조 · 쓰는 사람에게 달라진 것 · 1.0</summary>
+        <summary>펼쳐서 — 2.0 구조 · 새 기능 · 신뢰 · 1.0</summary>
         <div class="more">
           <p><span class="mh">구조</span>작업마다 브라우저를 새로 띄우던 방식에서, 계정마다 브라우저 하나를 여러 작업이 나눠 쓰는 탭 엔진 + 작업 대기열(Redis · arq)로. 로그인은 계정당 한 번. 무거운 작업과 가벼운 작업이 겹쳐도 가벼운 쪽이 먼저 자리를 받습니다.</p>
           <ul>
@@ -245,9 +251,27 @@
             <li>통계 대시보드 — 아침·저녁 예약 갱신, 기간을 골라 다시 계산</li>
             <li>프로모션 현황판 — 규칙을 화면에서 조립, 진행 중 순위 · 주간 한눈에 · 공지 캡처 · 수식 포함 엑셀</li>
             <li>추출의 터치 분류 — 최근 상담 이력을 대조해 이미 연락한 고객을 다시 돌리지 않게</li>
+            <li>내 메뉴 퀵모음 — 별표로 고르고 끌어서 순서, 최근 30일 많이 쓴 5개는 자동</li>
+            <li>주간 보고는 'N주차'로 고르기 — 회사 주차·공휴일 반영</li>
+            <li>일보 누적 장부에 자동으로 이어 붙이기 — 서식·수식까지 복사, 같은 날은 덮어씀</li>
+            <li>사은품 누락 자동 검수 · 실적 캡처 4종 한 번에</li>
+            <li>장애 대비 계산기 엑셀 — 전산이 멈춰도 내보내기 파일을 붙여 넣으면 수식만으로 같은 표(웹과 60개 표 대조, 같음)</li>
             <li>어디서나 웹으로 · 관리자는 지문·얼굴(패스키)과 2단계 인증</li>
           </ul>
-          <p><span class="mh">신뢰</span>바꿀 때마다 예전 방식과 결과를 칸 단위 · DB 내용 지문까지 대조한 뒤에만 반영합니다. 실패 자동 분류, 받은 조각부터 이어받기. 연락처는 해시로만 저장하고 고객 값은 로그·알림에 남기지 않습니다.</p>
+          <p><span class="mh">신뢰</span>바꿀 때마다 예전 방식과 결과를 칸 단위 · DB 내용 지문까지 대조한 뒤에만 반영합니다. 실패 자동 분류, 받은 조각부터 이어받기. 원본 응답 형식이 바뀌어도(압축·다른 형식) 스스로 가려 읽습니다. 연락처는 해시로만 저장하고 고객 값은 로그·알림에 남기지 않습니다.</p>
+          <p><span class="mh">보안</span>캐시 암호화 · 1회용 로그인 토큰 · 엑셀 수식 주입 차단 · 응답 크기 상한.</p>
+          <p><span class="mh">속도</span>전산 쪽 속을 바꾼 결과 (커밋·운영 측정 로그 · 일보 한 달치는 사용자 실측)</p>
+          <table class="tbl">
+            <caption class="sr">내부를 바꾼 뒤 걸리는 시간 비교</caption>
+            <thead><tr><th scope="col">작업</th><th scope="col" class="c-both">전 → 후</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">일보 누적 장부 저장</th><td class="c-both">10초 → <b>0.35초</b></td></tr>
+              <tr><th scope="row">장기 고객 집계 14.6만 줄</th><td class="c-both">64.0초 → <b>23.8초</b> (결과 같음)</td></tr>
+              <tr><th scope="row">연락처 해시 (Rust 모듈)</th><td class="c-both">1.56초 → <b>0.32초</b> (대조 차이 0)</td></tr>
+              <tr><th scope="row">일보 한 달치</th><td class="c-both">약 40초 → <b>31초</b></td></tr>
+            </tbody>
+          </table>
+          <p class="small">그 밖에 번호 세기 2.4초 → 0.31초(Rust, 대조 차이 0), 응답 해석 Rust 확장 5.9배. 원본 서버가 버티는 한계(동시 6개 · 약 12MB/s)를 재서 그 안에서만 당깁니다. 테스트 1,036개 통과.</p>
           <p><span class="mh">1.0</span>넥사크로는 일반 DOM 셀렉터가 통하지 않아, 구조를 거꾸로 읽어 그리드·콤보 단위로 누르는 방법을 직접 정립했습니다(데스크톱 PyQt6 → 팀 공용 웹 FastAPI). 2.0의 요청 틀은 이때 쌓은 이해에서 나왔습니다.</p>
           <p><span class="mh">접근</span>실제 운영 중인 사내 도구라 폐쇄망 + Tailscale로만 씁니다.</p>
         </div>
@@ -258,7 +282,7 @@
       <p class="meta card-head">02 · 다시 짓기</p>
       <ul class="chips" aria-label="기술"><li>Spring Boot 3.5</li><li>Next.js 16</li><li>PostgreSQL 복제</li><li>Redis</li><li>무중단 배포</li><li>PWA</li></ul>
       <h3 id="crm2-t">상담 CRM 2.0 — 운영 중인 시스템을 멈추지 않고 다시 짓다</h3>
-      <p class="body">직접 만들어 운영하던 상담 CRM(1.x)을 여러 사람이 동시에 써도 데이터가 틀어지지 않는 구조로 처음부터 다시 설계했습니다. 운영을 멈추지 않은 채 옮긴 뒤 1.x를 껐습니다. 데이터와 동작은 그대로, 구조와 화면은 새로.</p>
+      <p class="body">직접 만들어 운영하던 상담 CRM(1.x)을 여러 사람이 동시에 써도 데이터가 틀어지지 않는 구조로 처음부터 다시 설계했습니다. 운영을 멈추지 않은 채 옮긴 뒤 1.x를 껐습니다. 데이터와 동작은 그대로, 구조와 화면은 새로. 옮긴 뒤에도 상담 도구와 관리자 녹취 편집기를 붙이며 키우고 있습니다.</p>
       <dl class="stats">
         <div><dt>동시 부하 시험</dt><dd>50명</dd></div>
         <div><dt>응답 p95</dt><dd>6.7ms</dd></div>
@@ -289,7 +313,9 @@
       <details>
         <summary>펼쳐서 — 기능 · 설계 · 검증</summary>
         <div class="more">
-          <p><span class="mh">기능</span>KPI · 캘린더(일정·할 일·예약 통합) · 메모 / 프로모션 — 게시판 엑셀을 읽어 자동 반영·되돌리기 / 실시간 채팅·첨부·웹 푸시(PWA) / 녹취 편집·파일 변환·공동 시트 / 사용자·권한·알림 설정</p>
+          <p><span class="mh">기능</span>KPI · 캘린더(일정·할 일·예약 통합) · 메모 / 프로모션 — 게시판 엑셀을 읽어 자동 반영·되돌리기 / 상담 도구 — 스펙표·제휴카드·할인 계산·업무 도우미 / 실시간 채팅·첨부·웹 푸시(PWA) / 파일 변환·공동 시트 / 사용자·권한·알림 설정</p>
+          <p><span class="mh">녹취</span>관리자 녹취 편집기 — 옛 전화 녹음 형식도 브라우저에서 바로 열고, 자르고, 줄입니다. 편집하는 동안 녹취 파일은 그 PC 밖으로 나가지 않고, 받아쓰기를 요청할 때만 집 안 GPU로 한 번 갔다가 지워집니다.</p>
+          <p><span class="mh">반응</span>메뉴를 누르면 바로 화면을 보여 주고, 쉬는 틈에 다음 화면을 미리 받아 둡니다. 같은 탭 안에서만 메모리에 담아 두어 다른 로그인과 섞이지 않습니다.</p>
           <p><span class="mh">설계</span>Proxmox 전용 LXC — 앱(105)과 DB(106) 분리 / 주 DB → T8 N100 대기 DB 스트리밍 복제 + 매일 백업 / 행 단위 저장·낙관적 잠금(통째 덮어쓰기 제거) / 배경 작업은 한 곳에서만(Redis 잠금) / 새 컨테이너가 정상일 때만 바꾸는 무중단 배포</p>
           <p><span class="mh">이전</span>기능을 옮길 때마다 같은 입력 → 1.x와 같은 결과인지 자동 대조했습니다(일부러 틀린 코드를 넣어 대조가 잡아내는지도 확인). 1.x와 2.0을 실시간으로 잇는 다리를 두고 단계적으로 넘어갔습니다.</p>
           <p><span class="mh">검증</span>권한 전수 검사(전 항목 차단 확인) · 동시 50명 부하 시험 p95 6.7ms · 실패 0 · 의존성 고위험 취약점 0 · 보안 헤더·CSP 적용</p>
@@ -305,9 +331,9 @@
     <p class="kicker">인프라 · 집 안</p>
     <h2 id="infra-t">집 안의 작은 클라우드를 <b>혼자, 꺼지지 않게</b> 운영합니다.</h2>
     <p class="sub">위 서비스들은 빌린 서버가 아니라 집 안 기계에서 돕니다. 혼자 운영하려면 사람이 붙어 있지 않아도 버티는 규칙이 필요했습니다.</p>
-    <p class="meta asof">2026.11.02 기준</p>
+    <p class="meta asof">2026.11.06 기준 · 상태판 항목 수는 11.02</p>
     <dl class="stats stats4">
-      <div><dt>Proxmox 한 대 위</dt><dd>LXC 6개</dd></div>
+      <div><dt>Proxmox 한 대 위</dt><dd>LXC 8개</dd></div>
       <div><dt>물리적으로 다른 기계</dt><dd>대문 2곳</dd></div>
       <div><dt>상태판이 보는 항목</dt><dd>115개</dd></div>
       <div><dt>공유기 포트 포워딩</dt><dd>7 → 0</dd></div>
@@ -317,7 +343,8 @@
       <li><h3>집 주소를 밖에 내놓지 않기</h3><p>바깥 연결은 Cloudflare 터널로만 들어옵니다. 공유기 포트 포워딩을 7개에서 0개로 줄였습니다.</p></li>
       <li><h3>재부팅해도 손댈 것 없음</h3><p>로그인·서비스·터널이 순서대로 스스로 올라옵니다.</p></li>
       <li><h3>백업은 다른 기계·다른 디스크로, 매일</h3><p>지우는 일정까지 정해 두었고, 게임 DB 백업은 실제로 복원해 보는 검사까지 합니다.</p></li>
-      <li><h3>AI는 무료 클라우드부터, 막히면 집으로</h3><p>AI 게이트웨이가 Groq·Gemini·GitHub 모델을 차례로 쓰고, 모두 막히면 맥북의 로컬 모델로 넘어갑니다. 캐시펄스 공시 요약은 이제 집 안 로컬 모델이 맡습니다.</p></li>
+      <li><h3>AI는 무료 클라우드부터, 막히면 집으로</h3><p>AI 게이트웨이가 Groq·Gemini·GitHub 모델을 차례로 쓰고, 모두 막히면 맥북의 로컬 모델로 넘어갑니다. 게이트웨이는 EQR6의 전용 LXC로 옮겼고, 캐시펄스 공시 요약은 이제 집 안 로컬 모델이 맡습니다.</p></li>
+      <li><h3>지휘하는 PC에는 서비스를 두지 않기</h3><p>작업을 지시하는 PC(K12)는 지휘만 합니다. 거기서 돌던 서비스를 EQR6의 LXC와 T8 N100으로 옮겨, 서비스 컨테이너가 0개가 됐습니다.</p></li>
       <li><h3>고장은 폰이 먼저 안다</h3><p>아래 상태판 참고.</p></li>
     </ol>
 
@@ -336,6 +363,24 @@
         <div class="dev dev-iphone"><div class="screen ph"><p>실기기 녹화<br>준비 중</p></div></div>
         <figcaption class="cap-row"><span class="chip src">녹화 준비 중</span></figcaption>
       </figure>
+    </div>
+
+    <div class="card home">
+      <p class="meta card-head">집 · 홈 IoT</p>
+      <ul class="chips" aria-label="기술"><li>Rust</li><li>Homebridge</li><li>애플 홈</li><li>내부 전용</li></ul>
+      <h3>집도 자동화 <span class="h-sub">— 지원 안 되는 것을 붙이고, 얻은 데이터로 조건을 걸다</span></h3>
+      <p class="body">애플 홈을 지원하지 않는 월패드에 Homebridge를 붙여 애플 홈에 넣고, 그동안 쓸 수 없던 데이터(입차·현관 호출·경보·공휴일)로 조건부 자동화까지 만들었습니다.</p>
+      <ol class="home-steps">
+        <li><p class="meta">1단계 · 붙이기</p><p>월패드 업체 앱의 통신을 분석해 Rust 서비스(haru-home)로 다시 짰습니다. EQR6의 전용 LXC에서 돌고, Homebridge를 거쳐 애플 홈 기기가 됩니다. 조명 9 · 환풍기 · 난방 5개 방.</p></li>
+        <li><p class="meta">2단계 · 조건 걸기</p>
+          <ul class="dash">
+            <li>차가 단지에 들어오고 평일 저녁 시간대면 → 불 켜기</li>
+            <li>공휴일을 뺀 평일 아침 → 주방 불 켜기 (공휴일 표는 자동 생성)</li>
+            <li>현관 호출이 오면 → 사진과 함께 폰 알림</li>
+            <li>비상 경보(화재·비상 등)가 울리면 → 폰 알림, 해제도 알림</li>
+          </ul></li>
+      </ol>
+      <p class="small home-safe">규칙은 Face ID로 확인한 뒤에만 저장됩니다. 가스는 자동화에서 뺐고, 비밀번호는 저장하지 않으며, 단지 공용망은 건드리지 않습니다.</p>
     </div>
     <p class="closing">바깥 감시는 이 집과 상관없는 Cloudflare Worker가 5분마다 합니다.</p>
   </div>
@@ -478,8 +523,8 @@
           <figcaption class="cap-row"><span class="chip src">녹화 준비 중</span></figcaption>
         </figure>
         <h3>하루 온라인</h3>
-        <p>아기자기한 모바일 MMO. 마을·사냥·레이드(2~4인)·시즌 1 이야기.</p>
-        <p class="meta status-line">시즌 1 마무리 중</p>
+        <p>아기자기한 모바일 MMO. 마을·사냥·레이드(2~4인). 시즌 1 이야기로 1.0을 냈고, 지금은 정령 다섯과 약속을 맺고 바꿔 부르는 새 직업 '정령사'를 1.1로 넣는 중입니다. 시즌 4까지 줄기를 설계해 두었습니다.</p>
+        <p class="meta status-line">1.1 정령사 진행 중 · 실서버 1.1.9</p>
         <a class="go" href="https://online.haru-hub.com" target="_blank" rel="noopener">online.haru-hub.com ↗</a>
       </li>
       <li class="game">
@@ -491,7 +536,7 @@
           <figcaption class="cap-row"><span class="chip src">안드로이드 에뮬레이터 · 크롬</span><button class="vbtn" type="button" aria-pressed="false">정지</button></figcaption>
         </figure>
         <h3>하루 디펜스</h3>
-        <p>가볍게 여는 디펜스 게임. 저장소에 올리면 자동으로 배포됩니다.</p>
+        <p>가볍게 여는 디펜스 게임. 새 모드 '하루 돌격'은 무리를 불려 성을 들이받는 질주판입니다. 순위 점수는 서버 시계로 재서 조작을 막습니다. 저장소에 올리면 자동으로 배포됩니다.</p>
         <a class="go" href="https://defense.haru-hub.com" target="_blank" rel="noopener">defense.haru-hub.com ↗</a>
       </li>
       <li class="game">
@@ -519,11 +564,12 @@
         <p class="where">프랜드미디어 소속 · 콜센터 관리자 / 시스템 개선·자동화 <span class="meta">2024 — 현재</span></p>
         <ul class="dash">
           <li>콜센터 관리자로 일하며 매일 마주치는 시스템 허점·운영 불편을 동료 모두를 위해 정리하고 고쳤습니다.</li>
-          <li>사내 핵심 운영 시스템(RMS)의 사용성·정합성 문제를 정리해 벤더사와 함께 개선했습니다.</li>
+          <li><b>외부 업무 시스템 성능 분석</b> — 넥사크로 기반 업무 시스템(RMS)의 대량 조회 지연을 분석했습니다. 사내 100Mbps 공용망에서 병렬 요청 6~10개로 전송 병목을 재현하고, 약 30MB 응답이 약 23초 걸리는 것을 측정했습니다. gzip 미적용과 XML 응답 구조를 확인해 gzip 압축·SSV 전환·분할 전송을 제안했습니다. 자동화 도구가 아닌 공식 화면에서 같은 조건을 재현한 측정 자료와 화면 증거를 외부 시스템 담당 PM에게 전달했고, 외부 개발사와 기술 검토·협의를 진행했습니다.</li>
+          <li><b>업무 프로세스 · 시스템 예외 분석</b> — 렌탈 반환 접수와 확정 단계 사이의 미납금 처리 정책 불일치를 찾았습니다. 접수 취소 → 재접수가 반복되는 흐름을 짚고, 시스템 처리 조건과 실제 현업 프로세스를 대조해 개선 필요사항을 정리했습니다.</li>
           <li>신제품 등록 때 약관이 자동 연결되지 않는 누락을 법적 위험으로 짚어 의견을 냈고, 제품군별 약관 자동 적재 구조 개선과 기존 누락분 전수 조사·보정으로 이어졌습니다.
             <blockquote>"약관은 법적인 분쟁 요소가 있을 수 있어 혹시 추가 누락은 없는지 전수조사 및 일괄등록, 제품 등록 시 필수약관 자동적재 등의 보완이 필요해 보입니다."</blockquote></li>
           <li>상담사 주문 접수 화면이 멈추는 문제를, 소스 없이 화면 신호(오류 창·대기 중인 네트워크 요청·콘솔 기록)만으로 CTI 응답 지연 + API 호출 순서 문제로 좁혀 벤더사에 전달했고, 개선됐습니다.</li>
-          <li>일반 자동화가 안 통하는 사내 RIA 시스템을 Playwright로 자동화했습니다(보고 수시간 → 약 2분).</li>
+          <li><b>CRM 업무 자동화 · 생산성</b> — RMS 반복 조회·다운로드와 CRM 데이터 분석 자동화 도구를 만들었습니다. 2.0 실측으로 일보 한 달치 약 31초, 연계 터치 확인은 한 달치 약 4분 + 남은 1% 확인. 기존 업무 시스템은 그대로 두고 자동화 계층을 얹어 반복 작업을 없앴습니다.</li>
           <li>팀이 매일 쓰는 상담 CRM을 직접 설계·운영하고, 동시 사용에 맞게 2.0으로 다시 지어 운영 중단 없이 옮겼습니다.</li>
         </ul>
       </article>
@@ -589,7 +635,7 @@
 <footer class="foot">
   <div class="wrap">
     <p>haru-hub · 실사용 데이터로 업무 자동화를 만들고, 운영까지 혼자 합니다.</p>
-    <p class="meta">마지막 갱신 2026.11 · 이 페이지는 빌드 도구 없는 정적 HTML입니다.</p>
+    <p class="meta">마지막 갱신 2026.11.06 · 이 페이지는 빌드 도구 없는 정적 HTML입니다.</p>
   </div>
 </footer>
 </body>
