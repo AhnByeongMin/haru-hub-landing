@@ -11,7 +11,7 @@
 /* 이 페이지에 쓰인 글자만 담은 Pretendard 부분 파일(약 146KB). 없는 글자는 아래 동적 부분 파일로 넘어감.
    문구를 바꾸면 README 의 "글꼴 부분 파일 다시 만들기" 대로 재생성. */
 @font-face { font-family: "Pretendard Page"; font-style: normal; font-weight: 45 920; font-display: swap;
-  src: url(fonts/pretendard-page-subset.woff2?v=20261106qa) format("woff2"); }
+  src: url(fonts/pretendard-page-subset.woff2?v=20261127g) format("woff2"); }
 
 :root {
   color-scheme: dark;
@@ -65,14 +65,16 @@ b { font-weight: 750; }
 }
 .bar.scrolled { border-bottom-color: var(--line); }
 .bar-in { height: 52px; display: flex; align-items: center; gap: 8px; }
-.logo { font-family: var(--mono); font-weight: 500; font-size: 15px; color: var(--ink); margin-right: auto; min-height: 44px; display: flex; align-items: center; }
+.logo { font-family: var(--mono); font-weight: 500; font-size: 15px; color: var(--ink); margin-right: auto; min-height: 44px; display: flex; align-items: center; white-space: nowrap; }
 .bar-nav { display: flex; }
 .bar-nav a { min-height: 44px; min-width: 44px; display: flex; align-items: center; justify-content: center; padding: 0 8px; font-size: .84375rem; color: var(--ink-2); box-shadow: inset 0 -2px 0 transparent; }
 .bar-nav a[aria-current="true"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--cel); }
-.btn-line { min-height: 36px; padding: 0 16px; display: inline-flex; align-items: center; border: 1.5px solid var(--lamp); border-radius: 999px; color: var(--lamp); font-size: .875rem; font-weight: 700; margin-left: 4px; position: relative; }
+.btn-line { min-height: 36px; padding: 0 16px; display: inline-flex; white-space: nowrap; flex: none; align-items: center; border: 1.5px solid var(--lamp); border-radius: 999px; color: var(--lamp); font-size: .875rem; font-weight: 700; margin-left: 4px; position: relative; }
 .btn-line::after { content: ""; position: absolute; inset: -4px 0; }
 .btn-line:hover { color: var(--ink); }
-@media (max-width: 359px) { .n-journey { display: none !important; } }
+/* 11-27 '게임' 링크가 늘어 — 폰 폭에선 여정, 아주 좁으면 인프라도 숨김(목차 순서상 바로 아래라 손해 적음) */
+@media (max-width: 429px) { .n-journey { display: none !important; } }
+@media (max-width: 359px) { .n-infra { display: none !important; } }
 @media (max-width: 399px) { .bar-nav a { padding: 0 4px; } .logo { font-size: 14px; } }
 
 /* ── 버튼 · 링크 ── */
@@ -341,6 +343,68 @@ blockquote { margin-top: 8px; padding: 12px 16px; border-left: 2px solid var(--c
 .foot { padding: 48px 0 calc(48px + env(safe-area-inset-bottom)); border-top: 1px solid var(--line); color: var(--ink-2); font-size: .875rem; }
 .foot .meta { margin-top: 8px; }
 
+/* 게임 카드(첫 화면 아래) — 장르 칩 · 바로 하기 + 자세히 */
+.game-tags { margin-top: 8px; }
+.game-go { margin-top: 12px; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 20px; }
+.btn-sm { min-height: 44px; padding: 0 20px; font-size: .9375rem; }
+
+/* 바닥 메뉴(모든 페이지) */
+.foot-nav { display: flex; flex-wrap: wrap; gap: 0 20px; margin-bottom: 16px; }
+.foot-nav a { min-height: 44px; display: inline-flex; align-items: center; color: var(--cel); font-weight: 600; }
+.foot-nav a:hover { color: var(--ink); }
+.foot-nav a[aria-current="page"] { color: var(--ink); }
+
+/* ── 하위 페이지(게임 · 소개 · 개인정보) ── */
+.page { padding: 24px 0 72px; }
+@media (min-width: 1024px) { .page { padding: 48px 0 112px; } }
+.crumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 0 8px; font: 500 .8125rem/1.4 var(--mono); letter-spacing: .04em; color: var(--ink-3); margin-bottom: 8px; }
+.crumbs a { display: inline-flex; align-items: center; min-height: 44px; color: var(--cel); }
+.page-title { font-size: clamp(32px, 6.4vw, 52px); line-height: 1.2; font-weight: 800; letter-spacing: -.03em; }
+.page .lede { font-size: 1.0625rem; }
+.facts { margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; max-width: 760px; }
+.facts div { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
+.facts dt { font: 500 .75rem/1.4 var(--mono); letter-spacing: .04em; color: var(--ink-3); }
+.facts dd { margin-top: 2px; font-weight: 650; font-size: .9375rem; line-height: 1.45; }
+@media (min-width: 768px) { .facts { grid-template-columns: repeat(4, 1fr); } }
+.page .cta { margin-top: 24px; }
+.blk { margin-top: 64px; }
+.blk > h2 { font-size: clamp(22px, 4.4vw, 30px); margin-bottom: 16px; }
+.prose { max-width: 40em; color: var(--ink-2); display: grid; gap: 12px; }
+.prose b, .prose strong { color: var(--ink); }
+.prose a { text-decoration: underline; text-underline-offset: 3px; }
+.prose h3 { color: var(--ink); margin-top: 16px; font-size: 1.0625rem; }
+.blk .dash { max-width: 40em; }
+.blk .dash b { color: var(--ink); }
+.blk .dash .tlink, .blk details .tlink { display: inline; min-height: 0; padding-block: 10px; }
+.blk .rules { margin-bottom: 0; }
+.blk .log { gap: 20px; }
+.blk .log li p { color: var(--ink-2); }
+.blk details { max-width: 40em; }
+.blk details + details { margin-top: 0; }
+.blk details p { color: var(--ink-2); padding-bottom: 16px; }
+
+/* 실제 화면 사진 — 폰은 가로 넘김, 넓으면 3단 */
+.shots { margin-top: 32px; display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: var(--gut); margin-inline: calc(-1 * var(--gut)); padding: 0 var(--gut) 8px; }
+.shots figure { flex: 0 0 68%; max-width: 280px; scroll-snap-align: start; min-width: 0; }
+.shots img { width: 100%; height: auto; aspect-ratio: 540 / 1170; border-radius: 20px; border: 1px solid var(--line-strong); background: var(--surface-2); }
+.shots figcaption { margin-top: 8px; font-size: .8125rem; line-height: 1.55; color: var(--ink-2); }
+.shots figcaption .chip { margin-top: 6px; }
+@media (min-width: 768px) {
+  .shots { display: grid; grid-template-columns: repeat(3, 1fr); overflow: visible; margin: 32px 0 0; padding: 0; gap: 24px; max-width: 900px; }
+  .shots figure { max-width: none; }
+}
+.note { margin-top: 12px; font-size: .8125rem; color: var(--ink-3); max-width: 40em; }
+
+/* 게임 목록 페이지 · 다른 게임 */
+.glist { display: grid; gap: 16px; margin-top: 32px; max-width: 760px; }
+.glist li { display: grid; grid-template-columns: 96px 1fr; gap: 16px; align-items: start; background: var(--surface); border: 1px solid var(--line-strong); border-radius: 16px; padding: 16px; }
+.glist img { width: 96px; height: auto; aspect-ratio: 540 / 1170; border-radius: 12px; border: 1px solid var(--line); }
+.glist h2, .glist h3 { font-size: 1.1875rem; }
+.glist h2 a, .glist h3 a { display: inline-flex; align-items: center; min-height: 44px; }
+.glist p { margin-top: 4px; color: var(--ink-2); font-size: .9375rem; }
+.glist .game-go { margin-top: 8px; }
+@media (min-width: 768px) { .glist li { grid-template-columns: 140px 1fr; padding: 20px; } .glist img { width: 140px; } }
+
 /* 움직임 줄이기: 모든 연출 생략 */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -352,7 +416,7 @@ blockquote { margin-top: 8px; padding: 12px 16px; border-left: 2px solid var(--c
 @media print {
   :root { --ink: #000; --ink-2: #222; --ink-3: #444; --cel: #000; --lamp: #000; --bg: #fff; --surface: #fff; --surface-2: #f2f2f2; --lamp-wash: #f2f2f2; }
   body { background: #fff; color: #000; }
-  .bar, .skip, .map-fig, .media, .device, .gallery, .strip, .tabs, .cta, .vplay, .vbtn { display: none !important; }
+  .bar, .skip, .map-fig, .media, .device, .gallery, .strip, .tabs, .cta, .vplay, .vbtn, .shots { display: none !important; }
   [role="tabpanel"][hidden] { display: block !important; }
   details > .more { display: grid; }
   .card, .trio li { border-color: #999; }
