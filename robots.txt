@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /docs/
 
-Sitemap: https://hi.haru-hub.com/sitemap.xml
+Sitemap: https://haru-hub.com/sitemap.xml
